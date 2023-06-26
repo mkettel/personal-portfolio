@@ -1,0 +1,21 @@
+
+/* Navbar Stylesheet */
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(220, 220, 220);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.link-icon {
+  text-decoration: none;
+  color: black;
+}
+.navbar-container .navbar-right .link-icon:nth-child(2) {
+  margin: 0px 10px;
+}
