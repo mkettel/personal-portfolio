@@ -2,9 +2,8 @@ import './stylesheets/navbar.css'
 import { useState } from 'react'
 import { Link } from 'wouter';
 
-export default function Navbar() {
+export default function Navbar({page, setPage}) {
 
-  const [page, setPage] = useState()
 
 
   return <>
@@ -12,26 +11,23 @@ export default function Navbar() {
       <h1>Matthew Kettelkamp</h1>
     </div>
     <div className="navbar-container nav">
-      <div className="nav-item blue">
-        <Link className="nav-link" href="/portal">about</Link>
+      <div onClick={() => setPage('about')} className="nav-item blue">
+        <a className="nav-link" >about</a>
       </div>
-      <div className="nav-item tiffany-blue">
-        <Link className="nav-link" href="/portal">skills</Link>
+      <div onClick={() => setPage('skills')} className="nav-item tiffany-blue">
+        <a className="nav-link" >skills</a>
       </div>
-      <div className="nav-item purple">
-        <Link className="nav-link" href="/portal">projects</Link>
+      <div onClick={() => setPage('projects')} className="nav-item purple">
+        <a className="nav-link" >projects</a>
       </div>
-      <div className="nav-item chinese-violet">
-        <Link className="nav-link" href="/portal">contact</Link>
+      <div onClick={() => setPage('contact')} className="nav-item chinese-violet">
+        <a className="nav-link" >contact</a>
+      </div>
+      <div className="nav-item old-rose">
+        <Link className="nav-link" href="/portal">3D</Link>
       </div>
     </div>
 
-    <div className="content">
-      <div className="about-container .big-content">
-        <div className="container-title">
-          <h3>about</h3>
-        </div>
-      </div>
-    </div>
+
   </>
 }
