@@ -7,6 +7,7 @@ import { useState } from 'react'
 export default function Homepage() {
 
   const [page, setPage] = useState('about');
+  console.log(page);
 
   if (page === 'about') {
     return <About page={page} setPage={setPage} />
@@ -22,11 +23,12 @@ export default function Homepage() {
 
 
 
-export function About() {
+export function About({page, setPage}) {
+  console.log(page);
 
   return<>
   <div className="home-root">
-      <Navbar />
+      <Navbar page={page} setPage={setPage} />
       <div className="content">
         <div className="about-container .big-content">
           <div className="container-title">
@@ -37,11 +39,11 @@ export function About() {
     </div>
   </>
 }
-export function Skills() {
+export function Skills({page, setPage}) {
 
   return<>
   <div className="home-root">
-      <Navbar />
+      <Navbar page={page} setPage={setPage} />
       <div className="content">
         <div className="about-container .big-content">
           <div className="container-title">
@@ -53,11 +55,11 @@ export function Skills() {
   </>
 }
 
-export function Projects() {
+export function Projects({page, setPage}) {
 
   return<>
   <div className="home-root">
-      <Navbar />
+      <Navbar page={page} setPage={setPage} />
       <div className="content">
         <div className="about-container .big-content">
           <div className="container-title">
@@ -70,15 +72,15 @@ export function Projects() {
 }
 
 
-export function Contact() {
+export function Contact({page, setPage}) {
 
   return<>
   <div className="home-root">
-      <Navbar />
+      <Navbar page={page} setPage={setPage} />
       <div className="content">
         <div className="about-container .big-content">
           <div className="container-title">
-            <h3>projects</h3>
+            <h3>contact</h3>
           </div>
         </div>
       </div>

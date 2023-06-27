@@ -1,9 +1,8 @@
 import './stylesheets/navbar.css'
 import { useState } from 'react'
 import { Link } from 'wouter';
-import {About } from './Homepage';
 
-export default function Navbar() {
+export default function Navbar({page, setPage}) {
 
 
 
@@ -13,16 +12,19 @@ export default function Navbar() {
     </div>
     <div className="navbar-container nav">
       <div className="nav-item blue">
-        <Link className="nav-link" href="/portal">about</Link>
+        <a onClick={() => setPage('about')} className="nav-link" >about</a>
       </div>
       <div className="nav-item tiffany-blue">
-        <Link className="nav-link" href="/portal">skills</Link>
+        <a onClick={() => setPage('skills')} className="nav-link" >skills</a>
       </div>
       <div className="nav-item purple">
-        <Link className="nav-link" href="/portal">projects</Link>
+        <a onClick={() => setPage('projects')} className="nav-link" >projects</a>
       </div>
       <div className="nav-item chinese-violet">
-        <Link className="nav-link" href="/portal">contact</Link>
+        <a onClick={() => setPage('contact')} className="nav-link" >contact</a>
+      </div>
+      <div className="nav-item chinese-violet">
+        <Link className="nav-link" href="/portal">3D</Link>
       </div>
     </div>
 
