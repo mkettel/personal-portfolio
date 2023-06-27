@@ -1,5 +1,7 @@
 import Navbar from './Navbar'
+import AboutImage from './AboutImage'
 import './stylesheets/navbar.css'
+import './stylesheets/about.css'
 import { useState } from 'react'
 
 import * as THREE from 'three'
@@ -36,10 +38,12 @@ export function About({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content blue">
-        <div className="about-container .big-content">
+        <div className="main-container">
           <div className="container-title">
             <h3>about</h3>
+            <p>I am a software developer who is passionate about combining the 2d with 3d and bringing creative ideas to life </p>
           </div>
+          <AboutImage />
         </div>
       </div>
     </div>
@@ -51,7 +55,7 @@ export function Skills({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content tiffany-blue">
-        <div className="about-container .big-content">
+        <div className="main-container">
           <div className="container-title">
             <h3>skills</h3>
           </div>
@@ -67,7 +71,7 @@ export function Projects({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content purple">
-        <div className="about-container .big-content">
+        <div className="main-container .big-content">
           <div className="container-title">
             <h3>projects</h3>
           </div>
@@ -84,7 +88,7 @@ export function Contact({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content chinese-violet">
-        <div className="about-container .big-content">
+        <div className="main-container .big-content">
           <div className="container-title">
             <h3>contact</h3>
           </div>

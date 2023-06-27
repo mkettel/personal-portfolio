@@ -25,6 +25,9 @@ a,h3 {
   text-decoration: none;
   color: black;
 }
+p,h1,h2 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
 /* colors */
 .grey {
   background-color: #CCDBDC;
@@ -57,8 +60,6 @@ a,h3 {
   border-radius: 10px;
 }
 .header-container h1 {
-  font-family: 'Manrope', sans-serif;
-  font-family: 'Cabinet Grotesk', sans-serif;
   font-weight: 400;
   letter-spacing: 1.2px;
   font-size: 46px;
@@ -107,18 +108,27 @@ a,h3 {
   position: relative;
   animation: fade .5s ease-in-out;
 }
+.main-container {
+  padding: 80px 10px 0px;
+}
 
 .container-title {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: 40px;
+  max-width: 400px;
 }
 .container-title h3 {
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 500;
+  margin: 0px;
+}
+.container-title p {
+  font-size: 18px;
 }
 
+/* small 3d canvas */
 .small-canvas {
   position: absolute;
   top: 0;
