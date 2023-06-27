@@ -4,6 +4,11 @@ import { Link } from 'wouter';
 
 export default function Navbar({page, setPage}) {
 
+  const [active, setActive] = useState(false)
+
+  const activeClick = () => {
+    setActive(prevClicked => !prevClicked)
+  }
 
 
   return <>
@@ -14,8 +19,8 @@ export default function Navbar({page, setPage}) {
       <div onClick={() => setPage('about')} className="nav-item blue">
         <a className="nav-link" >about</a>
       </div>
-      <div onClick={() => setPage('skills')} className="nav-item tiffany-blue">
-        <a className="nav-link" >skills</a>
+      <div onClick={() => setPage('skills')} className="nav-item tiffany-blue" >
+        <a className='nav-link' >skills</a>
       </div>
       <div onClick={() => setPage('projects')} className="nav-item purple">
         <a className="nav-link" >projects</a>
@@ -23,8 +28,8 @@ export default function Navbar({page, setPage}) {
       <div onClick={() => setPage('contact')} className="nav-item chinese-violet">
         <a className="nav-link" >contact</a>
       </div>
-      <div className="nav-item old-rose">
-        <Link className="nav-link" href="/portal">3D</Link>
+      <div onClick={() => setPage('three')} className="nav-item old-rose">
+        <a className="nav-link" >3D</a>
       </div>
     </div>
 

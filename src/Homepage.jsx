@@ -2,6 +2,10 @@ import Navbar from './Navbar'
 import './stylesheets/navbar.css'
 import { useState } from 'react'
 
+import * as THREE from 'three'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei'
+
 
 
 export default function Homepage() {
@@ -17,6 +21,8 @@ export default function Homepage() {
     return <Projects page={page} setPage={setPage} />
   } else if (page === 'contact') {
     return <Contact page={page} setPage={setPage} />
+  } else if (page === 'three') {
+    return <Three page={page} setPage={setPage} />
   }
 
 }
@@ -82,6 +88,28 @@ export function Contact({page, setPage}) {
           <div className="container-title">
             <h3>contact</h3>
           </div>
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+export function Three({page, setPage}) {
+
+  return<>
+  <div className="home-root">
+      <Navbar page={page} setPage={setPage} />
+      <div className="content chinese-violet">
+        <div className='small-canvas'>
+          <Canvas>
+          <OrbitControls />
+
+            <mesh>
+              <boxGeometry />
+              <meshStandardMaterial />
+            </mesh>
+
+        </Canvas>
         </div>
       </div>
     </div>
