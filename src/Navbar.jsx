@@ -1,5 +1,6 @@
 import './stylesheets/navbar.css'
 import { useState } from 'react'
+import { Link } from 'wouter';
 
 export default function Navbar() {
 
@@ -12,16 +13,16 @@ export default function Navbar() {
     </div>
     <div className="navbar-container nav">
       <div className="nav-item blue">
-        <a className="nav-link" href="/portal">about</a>
+        <Link className="nav-link" href="/portal">about</Link>
       </div>
       <div className="nav-item tiffany-blue">
-        <a className="nav-link" href="/example">skills</a>
+        <Link className="nav-link" href="/portal">skills</Link>
       </div>
       <div className="nav-item purple">
-        <a className="nav-link" href="/portal">projects</a>
+        <Link className="nav-link" href="/portal">projects</Link>
       </div>
       <div className="nav-item chinese-violet">
-        <a className="nav-link" href="/portal">contact</a>
+        <Link className="nav-link" href="/portal">contact</Link>
       </div>
     </div>
 
