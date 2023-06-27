@@ -6,6 +6,7 @@ font-family: 'Chillax', sans-serif;
 font-family: 'Cabinet Grotesk', sans-serif;
 font-family: 'Melodrama', serif;
 font-family: 'Sora', sans-serif;
+font-family: 'Manrope', sans-serif;
 */
 
 /* Navbar Stylesheet */
@@ -29,6 +30,8 @@ a,h3 {
   background-color: #CCDBDC;
   background-color: #EEB3AA;
   background-color: transparent;
+  background-color: #80CED7;
+
 }
 .blue {
   background-color: #80CED7;
@@ -42,18 +45,23 @@ a,h3 {
 .purple {
   background-color: #D799EA;
 }
+.old-rose {
+  background-color: #C17767;
+}
 
 /* navbar container */
 .header-container {
   width: 100%;
-  padding: 5px 20px;
+  padding: 0px 20px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .header-container h1 {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  font-size: 38px;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  font-size: 46px;
 }
 .navbar-container {
   display: flex;
@@ -63,7 +71,7 @@ a,h3 {
   margin-top: 12px;
   width: 200px;
   overflow-y: scroll;
-  height: 80vh;
+  height: 77vh;
   position: sticky;
   top: 0;
 }
@@ -74,7 +82,13 @@ a,h3 {
   height: 150px;
   width: 180px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: .3s;
+}
+.nav-item:hover {
+  cursor: pointer;
+  background-color: transparent;
+  transition: .3s;
 }
 .nav-link {
   font-size: 22px;
@@ -87,7 +101,7 @@ a,h3 {
 .content {
   width: calc(100% - 205px);
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 12px;
   position: relative;
 }

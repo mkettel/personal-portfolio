@@ -29,7 +29,7 @@ export function About({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content">
+      <div className="content blue">
         <div className="about-container .big-content">
           <div className="container-title">
             <h3>about</h3>
@@ -44,7 +44,7 @@ export function Skills({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content">
+      <div className="content tiffany-blue">
         <div className="about-container .big-content">
           <div className="container-title">
             <h3>skills</h3>
@@ -60,7 +60,7 @@ export function Projects({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content">
+      <div className="content purple">
         <div className="about-container .big-content">
           <div className="container-title">
             <h3>projects</h3>
@@ -77,7 +77,7 @@ export function Contact({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content">
+      <div className="content chinese-violet">
         <div className="about-container .big-content">
           <div className="container-title">
             <h3>contact</h3>

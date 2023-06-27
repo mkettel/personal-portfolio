@@ -11,19 +11,19 @@ export default function Navbar({page, setPage}) {
       <h1>Matthew Kettelkamp</h1>
     </div>
     <div className="navbar-container nav">
-      <div className="nav-item blue">
-        <a onClick={() => setPage('about')} className="nav-link" >about</a>
+      <div onClick={() => setPage('about')} className="nav-item blue">
+        <a className="nav-link" >about</a>
       </div>
-      <div className="nav-item tiffany-blue">
-        <a onClick={() => setPage('skills')} className="nav-link" >skills</a>
+      <div onClick={() => setPage('skills')} className="nav-item tiffany-blue">
+        <a className="nav-link" >skills</a>
       </div>
-      <div className="nav-item purple">
-        <a onClick={() => setPage('projects')} className="nav-link" >projects</a>
+      <div onClick={() => setPage('projects')} className="nav-item purple">
+        <a className="nav-link" >projects</a>
       </div>
-      <div className="nav-item chinese-violet">
-        <a onClick={() => setPage('contact')} className="nav-link" >contact</a>
+      <div onClick={() => setPage('contact')} className="nav-item chinese-violet">
+        <a className="nav-link" >contact</a>
       </div>
-      <div className="nav-item chinese-violet">
+      <div className="nav-item old-rose">
         <Link className="nav-link" href="/portal">3D</Link>
       </div>
     </div>
