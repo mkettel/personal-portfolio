@@ -10,7 +10,7 @@ export default function App() {
     <div className="app">
       <Switch>
         <Route path="/" component={Homepage} />
-        <Route path="/portal" component={Portal} />
+        <Route path="/example" component={Portal} />
       </Switch>
     </div>
   </>

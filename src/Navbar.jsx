@@ -15,7 +15,7 @@ export default function Navbar() {
         <a className="nav-link" href="/portal">about</a>
       </div>
       <div className="nav-item tiffany-blue">
-        <a className="nav-link" href="/portal">skills</a>
+        <a className="nav-link" href="/example">skills</a>
       </div>
       <div className="nav-item purple">
         <a className="nav-link" href="/portal">projects</a>
