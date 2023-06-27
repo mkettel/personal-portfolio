@@ -1,9 +1,20 @@
+/* Fonts:
+font-family: 'Clash Display', sans-serif;
+font-family: 'Satoshi', sans-serif;
+font-family: 'Ranade', sans-serif;
+font-family: 'Chillax', sans-serif;
+font-family: 'Cabinet Grotesk', sans-serif;
+font-family: 'Melodrama', serif;
+font-family: 'Sora', sans-serif;
+*/
+
 
 /* Main Stylesheet */
 :root {
   background-color: rgb(239, 239, 239);
 }
 
+/* 3D Scene Css fixed page */
 .scene-root
 {
     position: fixed;

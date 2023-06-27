@@ -1,5 +1,5 @@
 import Navbar from './Navbar'
-import './style.css'
+import './stylesheets/navbar.css'
 
 
 
@@ -7,6 +7,8 @@ export default function Homepage() {
 
 
   return <>
-    <Navbar />
+    <div className="home-root">
+      <Navbar />
+    </div>
   </>
 }
