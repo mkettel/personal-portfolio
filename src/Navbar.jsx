@@ -1,10 +1,10 @@
 import './stylesheets/navbar.css'
 import { useState } from 'react'
 import { Link } from 'wouter';
+import {About } from './Homepage';
 
 export default function Navbar() {
 
-  const [page, setPage] = useState()
 
 
   return <>
@@ -26,12 +26,6 @@ export default function Navbar() {
       </div>
     </div>
 
-    <div className="content">
-      <div className="about-container .big-content">
-        <div className="container-title">
-          <h3>about</h3>
-        </div>
-      </div>
-    </div>
+
   </>
 }
