@@ -1,6 +1,12 @@
 import Navbar from './Navbar'
+import AboutImage from './AboutImage'
 import './stylesheets/navbar.css'
+import './stylesheets/about.css'
 import { useState } from 'react'
+
+import * as THREE from 'three'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei'
 
 
 
@@ -17,6 +23,8 @@ export default function Homepage() {
     return <Projects page={page} setPage={setPage} />
   } else if (page === 'contact') {
     return <Contact page={page} setPage={setPage} />
+  } else if (page === 'three') {
+    return <Three page={page} setPage={setPage} />
   }
 
 }
@@ -30,10 +38,12 @@ export function About({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content blue">
-        <div className="about-container .big-content">
+        <div className="main-container">
           <div className="container-title">
             <h3>about</h3>
+            <p>I am a software developer who is passionate about combining the 2d with 3d and bringing creative ideas to life </p>
           </div>
+          <AboutImage />
         </div>
       </div>
     </div>
@@ -45,7 +55,7 @@ export function Skills({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content tiffany-blue">
-        <div className="about-container .big-content">
+        <div className="main-container">
           <div className="container-title">
             <h3>skills</h3>
           </div>
@@ -61,7 +71,7 @@ export function Projects({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content purple">
-        <div className="about-container .big-content">
+        <div className="main-container .big-content">
           <div className="container-title">
             <h3>projects</h3>
           </div>
@@ -78,10 +88,32 @@ export function Contact({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content chinese-violet">
-        <div className="about-container .big-content">
+        <div className="main-container .big-content">
           <div className="container-title">
             <h3>contact</h3>
           </div>
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+export function Three({page, setPage}) {
+
+  return<>
+  <div className="home-root">
+      <Navbar page={page} setPage={setPage} />
+      <div className="content chinese-violet">
+        <div className='small-canvas'>
+          <Canvas>
+          <OrbitControls />
+
+            <mesh>
+              <boxGeometry />
+              <meshStandardMaterial />
+            </mesh>
+
+        </Canvas>
         </div>
       </div>
     </div>
