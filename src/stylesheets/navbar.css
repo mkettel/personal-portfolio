@@ -19,7 +19,7 @@ font-family: 'Sora', sans-serif;
   display: flex;
   flex-wrap: wrap;
 }
-a {
+a,h3 {
   font-family: 'Melodrama', serif;
   text-decoration: none;
   color: black;
@@ -27,6 +27,7 @@ a {
 /* colors */
 .grey {
   background-color: #CCDBDC;
+  background-color: #EEB3AA;
 }
 .blue {
   background-color: #80CED7;
@@ -51,6 +52,7 @@ a {
 .header-container h1 {
   font-family: 'Satoshi', sans-serif;
   font-weight: 500;
+  font-size: 38px;
 }
 .navbar-container {
   display: flex;
@@ -74,8 +76,9 @@ a {
   border-radius: 5px;
 }
 .nav-link {
-  font-size: 18px;
+  font-size: 22px;
 }
+
 
 
 
@@ -94,4 +97,6 @@ a {
 }
 .container-title h3 {
   font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 500;
 }

@@ -1,7 +1,9 @@
 import './stylesheets/navbar.css'
+import { useState } from 'react'
 
 export default function Navbar() {
 
+  const [page, setPage] = useState()
 
 
   return <>
