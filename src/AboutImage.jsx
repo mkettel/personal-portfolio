@@ -3,13 +3,15 @@ import { useFrame, useLoader, Canvas } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import * as THREE from 'three'
 import './stylesheets/navbar.css'
+import './stylesheets/about.css'
 
 
 export default function AboutImage() {
 
   // Textures can be used but not a must and results in a loss of color
-  const [ baliMe ] = useLoader(TextureLoader, [
-    './images/me_lol.jpg'
+  const [ baliMe, meSki ] = useLoader(TextureLoader, [
+    './images/me_lol.jpg',
+    './images/me-ski.JPG'
   ])
 
   return <>
@@ -18,11 +20,21 @@ export default function AboutImage() {
         <OrbitControls />
         <ambientLight intensity={.5} />
 
-        <mesh position={[0, 0, 0]} >
-        <boxGeometry args={[3, 3, 3]} />
-        <meshStandardMaterial map={baliMe} />
-          {/* <Image raycast={() => null} scale={[4.5, 4, 1]} position={[0, 0, 0.15]} side={THREE.DoubleSide} url={'./images/me_lol.jpg'} /> */}
-        </mesh>
+        <group position={[0, -0.2, 0]}>
+
+          <mesh position={[-3, 0, 0]} >
+            <boxGeometry args={[2, 2, 2]} />
+            <meshStandardMaterial map={baliMe} />
+              {/* <Image raycast={() => null} scale={[3.5, 3, 1]} position={[0, 0, 0.15]} side={THREE.DoubleSide} url={'./images/me_lol.jpg'} /> */}
+          </mesh>
+          <mesh position={[0, 0, 0]} rotation={[0, 0, 0]} >
+            <boxGeometry args={[2, 2, 2]} />
+            <meshStandardMaterial map={meSki} />
+              {/* <Image raycast={() => null} scale={[3.5, 3, 1]} position={[0, 0, 0.15]} side={THREE.DoubleSide} url={'./images/me-ski.JPG'} /> */}
+          </mesh>
+
+        </group>
+
 
         </Canvas>
       </div>

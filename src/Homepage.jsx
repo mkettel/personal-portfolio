@@ -37,7 +37,7 @@ export function About({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content blue">
+      <div className="content blue-grey">
         <div className="main-container">
           <div className="container-title">
             <h3>about</h3>
