@@ -16,7 +16,7 @@ export default function Navbar({page, setPage}) {
       <h1>Matthew Kettelkamp</h1>
     </div>
     <div className="navbar-container nav">
-      <div onClick={() => setPage('about')} className="nav-item blue">
+      <div onClick={() => setPage('about')} className="nav-item blue-grey">
         <a className="nav-link" >about</a>
       </div>
       <div onClick={() => setPage('skills')} className="nav-item tiffany-blue" >
