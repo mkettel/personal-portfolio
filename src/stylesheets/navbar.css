@@ -174,9 +174,11 @@ p,h1,h2 {
   text-transform: uppercase;
   font-weight: 500;
   margin: 0px;
+  color: #EEE0CB
 }
 .container-title p {
   font-size: 18px;
+  color: #EEE0CB
 }
 
 
