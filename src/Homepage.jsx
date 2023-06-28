@@ -13,7 +13,6 @@ import { OrbitControls } from '@react-three/drei'
 export default function Homepage() {
 
   const [page, setPage] = useState('about');
-  console.log(page);
 
   if (page === 'about') {
     return <About page={page} setPage={setPage} />
@@ -32,7 +31,6 @@ export default function Homepage() {
 
 
 export function About({page, setPage}) {
-  console.log(page);
 
   return<>
   <div className="home-root">
