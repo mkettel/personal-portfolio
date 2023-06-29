@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
-import AboutImage from './AboutImage'
+import AboutImage from './components/AboutImage'
+import ProjectComponent from './components/ProjectComponent'
 import './stylesheets/navbar.css'
 import './stylesheets/about.css'
 import './stylesheets/project.css'
@@ -73,33 +74,11 @@ export function Projects({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content purple">
-        <div className="main-container .big-content">
+        <div className="normal-container .big-content">
           <div className="container-title">
             <h3>projects</h3>
           </div>
-          <div className="project-container">
-            <div className="project-card">
-              <h3>Project 1</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 2</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 3</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 4</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 5</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 6</h3>
-            </div>
-            <div className="project-card">
-              <h3>Project 7</h3>
-            </div>
-          </div>
+          <ProjectComponent />
         </div>
       </div>
     </div>

@@ -278,7 +278,7 @@ p,h1,h2 {
   /* Content Container */
   .content {
     width: calc(100% - 1px);
-    height: 50vh;
+    height: 51vh;
     margin-top: 12px;
     position: relative;
     animation: fade .5s ease-in-out;
