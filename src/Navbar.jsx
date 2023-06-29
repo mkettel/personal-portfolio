@@ -17,6 +17,11 @@ export default function Navbar({page, setPage}) {
   return <>
     <div className="header-container grey">
       <h1>Matthew Kettelkamp</h1>
+      <div className="link-box">
+        <a href="#">Github</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Email</a>
+      </div>
     </div>
     <div className="navbar-container nav">
       <div onClick={() => {setPage('about'), setActive('tile-about')}} id='tile-about' className={`nav-item ${active === 'tile-about' ? 'active' : 'none'} blue-grey`}>
