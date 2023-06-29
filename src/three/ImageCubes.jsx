@@ -21,19 +21,12 @@ export default function ImageCubes() {
 
     // left image ref
     const groupRef = useRef()
-    const imageMiddleRef = useRef()
-
-    useFrame(() => {
-      groupRef.current.rotation.y += 0.0009;
-      groupRef.current.rotation.x += 0.0008;
-      // groupRef.current.rotation.z += 0.001;
-
-    })
 
   return <>
 
-      <Center>
-        <group scale={1.6} rotation={[0, .4, 0]} ref={groupRef} position={[0, 0, 0]}>
+
+      {/* <Center> */}
+        <group scale={1.6} rotation={[0, .7, 0]} ref={groupRef} position={[0, 0, 0]}>
 
           {/* Bottom Image */}
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
@@ -43,7 +36,7 @@ export default function ImageCubes() {
           </mesh>
 
           {/* Front Image */}
-            <mesh ref={imageMiddleRef} position={[0, 0, 0.01]} rotation={[0, 0, 0]} >
+            <mesh position={[0, 0, 0.01]} rotation={[0, 0, 0]} >
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={meSki} />
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski.JPG'} />
@@ -78,7 +71,7 @@ export default function ImageCubes() {
           </mesh>
 
         </group>
-      </Center>
+      {/* </Center> */}
 
 
   </>
