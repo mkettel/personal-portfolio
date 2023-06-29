@@ -33,10 +33,10 @@ export default function Navbar({page, setPage}) {
       <div onClick={() => {setPage('projects'), setActive('tile-projects')}} id='tile-projects' className={`nav-item ${active === 'tile-projects' ? 'active' : 'none'} purple`}>
         <a className="nav-link" >projects</a>
       </div>
-      <div onClick={() => setPage('contact')} id='tile-contact' className="nav-item none chinese-violet">
+      <div onClick={() => {setPage('contact'), setActive('tile-contact')}} id='tile-contact' className={`nav-item ${active === 'tile-contact' ? 'active' : 'none'} chinese-violet`}>
         <a className="nav-link" >contact</a>
       </div>
-      <div onClick={() => setPage('three')} id='tile-3d' className="nav-item none old-rose">
+      <div onClick={() => {setPage('three'), setActive('tile-three')}} id='tile-three' className={`nav-item ${active === 'tile-three' ? 'active' : 'none'} old-rose`}>
         <a className="nav-link" >3D</a>
       </div>
     </div>
