@@ -51,15 +51,32 @@ p,h1,h2 {
 
 /* navbar container */
 .header-container {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 0px 20px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
 }
 .header-container h1 {
   font-weight: 450;
   letter-spacing: 1.2px;
   font-size: 46px;
+}
+.link-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0px;
+  align-items: flex-end;
+}
+.link-box a {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+.link-box a:hover {
+  color: #DD6E42;
 }
 .navbar-container {
 
@@ -180,6 +197,7 @@ p,h1,h2 {
   font-size: 18px;
   color: #EEE0CB
 }
+
 
 
 
