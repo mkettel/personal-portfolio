@@ -2,11 +2,12 @@ import Navbar from './Navbar'
 import AboutImage from './AboutImage'
 import './stylesheets/navbar.css'
 import './stylesheets/about.css'
+import './stylesheets/project.css'
 import { useState } from 'react'
-
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei';
+import { gsap } from "gsap";
 
 
 
@@ -49,6 +50,7 @@ export function About({page, setPage}) {
     </div>
   </>
 }
+
 export function Skills({page, setPage}) {
 
   return<>
@@ -74,6 +76,29 @@ export function Projects({page, setPage}) {
         <div className="main-container .big-content">
           <div className="container-title">
             <h3>projects</h3>
+          </div>
+          <div className="project-container">
+            <div className="project-card">
+              <h3>Project 1</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 2</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 3</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 4</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 5</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 6</h3>
+            </div>
+            <div className="project-card">
+              <h3>Project 7</h3>
+            </div>
           </div>
         </div>
       </div>

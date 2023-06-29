@@ -24,7 +24,7 @@ font-family: 'Clash Grotesk', sans-serif;
 a,h3 {
   font-family: 'Clash Grotesk', sans-serif;
   text-decoration: none;
-  color: #EEE0CB
+  color: #EEE0CB;
 }
 p,h1,h2 {
   font-family: 'Clash Grotesk', sans-serif;
@@ -84,29 +84,38 @@ p,h1,h2 {
   --m: 1; /* number of columns */
   --g: 8px;  /* control the gap */
   --f: .15;   /* control the scale factor */
-  --s: .01; /* standard size */
+  --s: .05; /* standard size */
 
-  display: grid;
-  grid-template-columns: repeat(var(--m), auto);
-  gap: var(--g);
-  margin-top: 12px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(var(--m), auto); */
+  /* gap: var(--g); */
+  /* margin-top: 12px; */
+  /* width: 195px; */
+  /* overflow-y: scroll; */
+  /* height: 77vh; */
+  /* position: sticky; */
+  /* top: 0; */
+  display: flex;
+  flex-direction: column;
   width: 195px;
-  overflow-y: scroll;
-  height: 77vh;
+  gap: 8px;
+  margin-top: 12px;
+}
+.nav {
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 .nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 70px;
+  width: calc(77vh*var(--s)/var(--n));
+  height: calc(100vw*var(--s)/var(--m));
+  /* width: 180px; */
+  /* height: 70px; */
   border: 1px solid transparent;
   border-radius: 10px;
   position: relative;
-  /* width: .1px; */
-  /* height: .1px; */
   min-height: 70px;
   min-width: 180px;
   cursor: pointer;
@@ -178,6 +187,8 @@ p,h1,h2 {
 }
 .main-container {
   padding: 80px 10px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .container-title {
