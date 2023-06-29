@@ -1,6 +1,10 @@
 
 
 /* Container for Grid Elements */
+.normal-container {
+  padding: 60px 10px 0px;
+  display: flex;
+}
 .project-container {
 
   --n: 1; /* number of rows*/
@@ -8,29 +12,18 @@
   --g: 10px;  /* control the gap */
   --f: .1;   /* control the scale factor */
 
-  display: grid;
-  gap: var(--g);
-  width: 100%;
-  height: 100%;
-  justify-items: center;
-  grid-template-columns: repeat(var(--m),auto);
+  display: flex;
   padding: 0px 10px 20px 10px;
-  overflow-x: scroll;
+  margin-top: 10px;
 }
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: calc(100vh*var(--f)/var(--n));
-  height: calc(100vw*var(--f)/var(--m));
-  min-height: 370px;
+  min-height: 400px;
   min-width: 300px;
   object-fit: cover;
   cursor: pointer;
-  filter: grayscale(80%);
-  transition: .35s linear;
   border: 1px solid #EEE0CB;
   border-radius: 10px;
-  transition: .5s;
 }

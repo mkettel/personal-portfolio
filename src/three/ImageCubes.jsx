@@ -31,8 +31,8 @@ export default function ImageCubes() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? .9 : 1.6; // Adjust the scale values for mobile
-        const position = isMobile ? [0, 0, 0] : [0, 0, 0]
+        const scale = isMobile ? 1 : 1.6; // Adjust the scale values for mobile
+        const position = isMobile ? [0, 0, -.5] : [0, 0, 0]
         setImageScale(scale);
         setImagePosition(position);
       }
