@@ -40,9 +40,9 @@ export function About({page, setPage}) {
         <div className="main-container">
           <div className="container-title">
             <h3>about</h3>
-            <p>I am a software developer who is passionate about combining the 2d with 3d and bringing creative ideas to life </p>
+            <p className='top-text'>I am a software developer who is passionate about combining the 2d with 3d and bringing creative ideas to life </p>
             <p className='label-rotate'>A life enthusiast who loves to explore physically and technically.</p>
-            <p>( Spin the cube! )</p>
+            <p className='spin-label'>( Spin the cube! )</p>
           </div>
           <AboutImage />
         </div>

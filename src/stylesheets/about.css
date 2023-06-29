@@ -18,4 +18,12 @@
     top: 10px;
     left: 0px;
    }
+   .label-rotate {
+    position: absolute;
+    bottom: -190px;
+   }
+   .spin-label {
+    position: absolute;
+    bottom: -220px;
+   }
 }
