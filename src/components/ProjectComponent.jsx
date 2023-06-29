@@ -14,7 +14,7 @@ export default function ProjectComponent() {
 
       <div className="project-container">
         <div className="project-card">
-          <h3>Project 1</h3>
+          <h3>{projectArray[0].title}</h3>
         </div>
       </div>
 
