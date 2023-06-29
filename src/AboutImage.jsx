@@ -1,6 +1,5 @@
 import { Image, Text, OrbitControls, Center} from '@react-three/drei'
 import { useFrame, useLoader, Canvas } from '@react-three/fiber'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { useRef, Suspense } from 'react'
 import * as THREE from 'three'
 import './stylesheets/navbar.css'
