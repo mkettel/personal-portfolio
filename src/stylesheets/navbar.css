@@ -210,9 +210,6 @@ p,h1,h2 {
 }
 
 
-
-
-
 @keyframes fade {
   0% {
     opacity: 0;
@@ -223,4 +220,91 @@ p,h1,h2 {
   100% {
     opacity: 1;
   }
+}
+
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+
+  .header-container {
+    padding: 0px 15px;
+    width: 91%;
+  }
+  .header-container h1 {
+    font-size: 36px;
+    margin: 15px;
+  }
+  .link-box a {
+    font-size: 16px;
+  }
+  .home-root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navbar-container {
+
+    --n: 5; /* number of rows*/
+    --m: 1; /* number of columns */
+    --g: 8px;  /* control the gap */
+    --f: .25;   /* control the scale factor */
+    --s: .05; /* standard size */
+
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .nav-item {
+    width: calc(77vh*var(--s)/var(--n));
+    height: calc(100vw*var(--s)/var(--m));
+    min-height: 80px;
+    min-width: 65px;
+  }
+  .nav-item.active {
+
+    min-height: 90px;
+    min-width: 70px;
+  }
+  .nav-link {
+    font-size: 16px;
+    transform: rotate(-90deg);
+  }
+  /* Content Container */
+  .content {
+    width: calc(100% - 1px);
+    height: 47vh;
+    margin-top: 12px;
+    position: relative;
+    animation: fade .5s ease-in-out;
+  }
+  .main-container {
+    padding: 60px 10px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .container-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 350px;
+  }
+  .container-title h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0px;
+    color: #EEE0CB
+  }
+  .container-title p {
+    font-size: 18px;
+    color: #EEE0CB
+  }
+
+
 }

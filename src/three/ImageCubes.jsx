@@ -25,13 +25,16 @@ export default function ImageCubes() {
 
     // Image Scale State and Function
     const [imageScale, setImageScale] = useState(1.6)
+    const [imagePosition, setImagePosition] = useState([0, 0, 0])
 
     useEffect(() => {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
         const scale = isMobile ? .9 : 1.6; // Adjust the scale values for mobile
+        const position = isMobile ? [-.3, -1.3, 0] : [0, 0, 0]
         setImageScale(scale);
+        setImagePosition(position);
       }
 
       window.addEventListener('resize', handleResize);
@@ -47,7 +50,7 @@ export default function ImageCubes() {
 
 
       {/* <Center> */}
-        <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={[0, 0, 0]}>
+        <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition}>
 
           {/* Bottom Image */}
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
