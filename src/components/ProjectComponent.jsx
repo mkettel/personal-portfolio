@@ -38,7 +38,7 @@ export default function ProjectComponent() {
                 <h2>{project.title}</h2>
               </div>
               <div className="screen-image">
-                <video className="video-player" autoPlay muted loop src={project.videoUrl}></video>
+                <video className="video-player" playsInline autoPlay muted loop src={project.videoUrl}></video>
               </div>
               <div className="screen-overlay"></div>
               <div className="project-lang">
