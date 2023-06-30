@@ -75,7 +75,7 @@ export function Projects({page, setPage}) {
       <Navbar page={page} setPage={setPage} />
       <div className="content purple">
         <div className="normal-container .big-content">
-          <div className="container-title">
+          <div className="project-container-title">
             <h3>projects</h3>
           </div>
           <ProjectComponent />

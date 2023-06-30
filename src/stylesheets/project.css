@@ -7,6 +7,20 @@ h3,h2,p {
 .normal-container {
   padding: 0px 10px 0px;
   display: flex;
+  flex-direction: column;
+}
+.project-container-title {
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  max-width: 350px;
+}
+.project-container-title h3 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0px;
+  color: #EEE0CB
 }
 .project-container {
 
