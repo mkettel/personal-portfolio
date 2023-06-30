@@ -31,6 +31,20 @@ export default function ProjectComponent() {
       videoUrl: '/videos/jolt-recording.mp4',
       lang: ['React', 'Node.js', 'Firebase', 'GSAP']
     },
+    {
+      id: 5,
+      title: 'Deepwork.',
+      videoUrl: '/videos/deepwork.mp4',
+      lang: ['Ruby', 'Rails', 'SASS', 'JS'],
+      link: "https://deepwork-official.herokuapp.com/"
+    },
+    {
+      id: 6,
+      title: 'AVTECHDADDY',
+      videoUrl: '/videos/techdaddy-video.mp4',
+      lang: ['HTML', 'CSS', 'JS'],
+      link: "https://av-techdaddy.vercel.app/"
+    },
 
 
   ]
