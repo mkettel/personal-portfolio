@@ -133,8 +133,14 @@ h3,h2,p {
   .project-card  .project-title h2{
     font-size: 28px;
   }
+  .project-card .project-lang {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+  }
   .project-card .project-lang p {
-    margin-right: 25px;
+    margin-right: 20px;
     font-size: 14px;
   }
 }
