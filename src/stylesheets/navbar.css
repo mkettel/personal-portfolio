@@ -285,7 +285,8 @@ p,h1,h2 {
     margin-top: 12px;
     position: relative;
     animation: fade .5s ease-in-out;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   .main-container {
     padding: 60px 10px 0px;
