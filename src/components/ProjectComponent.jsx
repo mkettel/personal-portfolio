@@ -27,10 +27,9 @@ export default function ProjectComponent() {
     },
     {
       id: 4,
-      title: 'Jolt Chrome Extension',
+      title: 'Jolt',
       videoUrl: '/videos/jolt-recording.mp4',
-      lang: ['React', 'Node.js', 'Firebase', 'GSAP'],
-      link: "#"
+      lang: ['React', 'Node.js', 'Firebase', 'GSAP']
     },
 
 
@@ -47,11 +46,13 @@ export default function ProjectComponent() {
               <div className="project-title">
                 <h2>{project.title}</h2>
               </div>
-              <div className="project-link-link">
-                <a target="_blank" href={project.link}>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
+              {project.link ? (
+                <div className="project-link-link">
+                  <a target="_blank" href={project.link}>
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              ) : ( <div className="project-link-link"></div> )}
               <div className="screen-image">
                 <video className="video-player" playsInline autoPlay muted loop src={project.videoUrl}></video>
               </div>
