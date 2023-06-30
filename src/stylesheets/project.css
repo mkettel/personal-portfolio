@@ -22,6 +22,16 @@ h3,h2,p {
   margin: 0px;
   color: #EEE0CB
 }
+.project-link-link {
+  position: absolute;
+  font-size: 18px;
+  right: 25px;
+  top: 27px;
+  z-index: 10000;
+}
+.project-link-link i {
+  color: #EEE0CB;
+}
 .project-container {
 
   --n: 1; /* number of rows*/
@@ -42,7 +52,7 @@ h3,h2,p {
   width: 500px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 3px solid #EEE0CB;
   overflow: hidden;
 
@@ -137,7 +147,7 @@ h3,h2,p {
     font-size: 28px;
   }
   .project-card .project-lang {
-    width: 100%;
+    width: 120%;
     position: absolute;
     bottom: 15px;
     left: 0px;
