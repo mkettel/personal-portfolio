@@ -116,4 +116,11 @@ h3,h2,p {
     height: 290px;
     width: 300px;
   }
+  .project-card  .project-title h2{
+    font-size: 28px;
+  }
+  .project-card .project-lang p {
+    margin-right: 25px;
+    font-size: 14px;
+  }
 }
