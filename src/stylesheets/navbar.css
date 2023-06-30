@@ -44,6 +44,7 @@ p,h1,h2 {
 }
 .purple {
   background-color: #3F2A2B;
+  overflow-x: scroll;
 }
 .old-rose {
   background-color: #C17767;
@@ -184,6 +185,8 @@ p,h1,h2 {
   margin-top: 12px;
   position: relative;
   animation: fade .5s ease-in-out;
+  display: flex;
+  align-items: center;
 }
 .main-container {
   padding: 80px 10px 0px;
@@ -282,6 +285,7 @@ p,h1,h2 {
     margin-top: 12px;
     position: relative;
     animation: fade .5s ease-in-out;
+    overflow-x: scroll;
   }
   .main-container {
     padding: 60px 10px 0px;

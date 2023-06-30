@@ -1,8 +1,11 @@
 
-
+h3,h2,p {
+  color: #EEE0CB;
+  font-family: 'Clash Grotesk', sans-serif;
+}
 /* Container for Grid Elements */
 .normal-container {
-  padding: 60px 10px 0px;
+  padding: 0px 10px 0px;
   display: flex;
 }
 .project-container {
@@ -13,20 +16,91 @@
   --f: .1;   /* control the scale factor */
 
   display: flex;
-  padding: 0px 10px 20px 10px;
-  margin-top: 10px;
+  padding: 0px 20px 20px 20px;
+  margin-top: 20px;
+  gap: 15px;
 }
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
-  min-width: 300px;
+  height: 350px;
+  width: 500px;
   object-fit: cover;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
-  border: 1px solid #EEE0CB;
+  border: 3px solid #EEE0CB;
+  overflow: hidden;
+
+  /* background-color: #EEE0CB; */
   border-radius: 10px;
 }
-.project-card h3 {
-  text-align: center;
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 0% -100%;
+  }
+}
+.screen-overlay {
+  background: linear-gradient(#34605a18, #34605a11 3px, transparent 3px, transparent 9px);
+  background-size: 100% 9px;
+  height: 100%;
+  width: 100%;
+  animation: pan-overlay 22s infinite linear;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+}
+.project-card  .project-title {
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  z-index: 1000;
+}
+.project-card  .project-title h2{
+  font-weight: 400;
+}
+.project-card  .screen-image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  background-size: contain;
+  border-radius: 10px;
+  overflow: hidden;
+  /* background-size: 130%; */
+  /* background-position: 0% 0%; */
+  /* filter: sepia(100%) hue-rotate(160deg); */
+  /* opacity: 0.9; */
+}
+.project-card .screen-image .video-player {
+  height: 100%;
+  width: 90%;
+}
+.project-card .project-lang {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  animation: slider 13s infinite linear;
+}
+.project-card .project-lang p {
+  margin-right: 25px;
+}
+@keyframes slider {
+  from {
+    left: -90%;
+  }
+  to {
+    left: 120%;
+  }
 }
