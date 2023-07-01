@@ -4,11 +4,13 @@ import ProjectComponent from './components/ProjectComponent'
 import './stylesheets/navbar.css'
 import './stylesheets/about.css'
 import './stylesheets/project.css'
+import './stylesheets/skills.css'
 import { useState } from 'react'
 import * as THREE from 'three'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { gsap } from "gsap";
+import SkillComponent from './components/SkillComponent'
 
 
 
@@ -58,10 +60,11 @@ export function Skills({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content tiffany-blue">
-        <div className="main-container">
+        <div className="main-container-skills">
           <div className="container-title">
             <h3>skills</h3>
           </div>
+          <SkillComponent />
         </div>
       </div>
     </div>
