@@ -79,6 +79,17 @@ h3,h2,p {
   left: 0px;
   top: 0px;
 }
+.screen-overlay:nth-child(2) {
+  background: linear-gradient(#34605a18, #34605a11 3px, transparent 3px, transparent 9px);
+  background-size: 100% 9px;
+  height: 100%;
+  width: 100%;
+  animation: pan-overlay 25s infinite linear;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+}
 .project-card  .project-title {
   position: absolute;
   top: 0px;
@@ -116,6 +127,14 @@ h3,h2,p {
   left: 0px;
   display: flex;
   animation: slider 13s infinite linear;
+}
+.project-card:nth-child(2) .project-lang {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  animation: slider 14s infinite linear;
 }
 .project-card .project-lang p {
   margin-right: 25px;
