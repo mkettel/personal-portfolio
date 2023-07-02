@@ -45,18 +45,25 @@ export default function ImageCubes() {
     };
   }, []);
 
+  // Hover state for cube
+  const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
+
 
   return <>
 
 
       {/* <Center> */}
-        <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition}>
+        <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
 
           {/* Bottom Image */}
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={dino} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.jpg'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.jpg'}  />
           </mesh>
 
           {/* Front Image */}
@@ -70,7 +77,7 @@ export default function ImageCubes() {
           <mesh  position={[-1.01, 0, -1]} rotation={[0, -Math.PI / 2, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={baliMe} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me_lol.jpg'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol.jpg'} />
           </mesh>
 
           {/* Right Side Image */}
