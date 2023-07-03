@@ -59,98 +59,98 @@ export default function SkillScene() {
       >
         {/* Cube Group */}
 
-      <Float ref={cube} speed={1} rotationIntensity={1.2}  floatingRange={[-1, 1]}>
-      <group ref={cube} position={cubePosition} scale={cubeScale} >
+      <Float ref={cube} speed={1} rotationIntensity={1.9}  floatingRange={[-1, 1]}>
+        <group ref={cube} position={cubePosition} scale={cubeScale} >
 
-        <mesh castShadow receiveShadow position={[0, 0, 0]} >
-          <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
-            <MeshTransmissionMaterial backside
-                samples={4}
-                thickness={3}
-                chromaticAberration={0.035}
-                anisotropy={0.1}
-                distortion={0.1}
-                distortionScale={0.1}
-                temporalDistortion={0.2}
-                iridescence={1}
-                iridescenceIOR={1}
-                iridescenceThicknessRange={[0, 1400]}
-                side={THREE.DoubleSide}
-                blend={0}
-                // color={'blue'}
-                >
-            </MeshTransmissionMaterial>
-          </RoundedBox>
-        </mesh>
+          <mesh castShadow receiveShadow position={[0, 0, 0]} >
+            <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
+              <MeshTransmissionMaterial backside
+                  samples={4}
+                  thickness={3}
+                  chromaticAberration={0.035}
+                  anisotropy={0.1}
+                  distortion={0.1}
+                  distortionScale={0.1}
+                  temporalDistortion={0.2}
+                  iridescence={1}
+                  iridescenceIOR={1}
+                  iridescenceThicknessRange={[0, 1400]}
+                  side={THREE.DoubleSide}
+                  blend={0}
+                  // color={'blue'}
+                  >
+              </MeshTransmissionMaterial>
+            </RoundedBox>
+          </mesh>
 
-        <Float speed={1} rotationIntensity={1.2} floatingRange={[-.5, .3]}>
+          <Float speed={1} rotationIntensity={1.2} floatingRange={[-.5, .3]}>
+            <Text3D
+              font={latoBold}
+              position={[-4, -.3, .7]}
+              scale={[.5, .5, .5]}
+              letterSpacing={.15}
+              height={.2}
+            >
+              React Three Fiber
+            <meshStandardMaterial color={'#E3170A'} castShadow  />
+          </Text3D>
+          </Float>
           <Text3D
             font={latoBold}
-            position={[-4, -.3, .7]}
+            rotation={[.1, 0, .2]}
+            position={[-4, 1, 0]}
             scale={[.5, .5, .5]}
             letterSpacing={.15}
             height={.2}
           >
-            React Three Fiber
-          <meshStandardMaterial color={'#E3170A'} castShadow  />
+            React
+          <meshStandardMaterial color={'#42CAFD'} castShadow  />
         </Text3D>
-        </Float>
-        <Text3D
-          font={latoBold}
-          rotation={[.1, 0, .2]}
-          position={[-4, 1, 0]}
-          scale={[.5, .5, .5]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          React
-        <meshStandardMaterial color={'#42CAFD'} castShadow  />
-      </Text3D>
-        <Text3D
-          font={latoBold}
-          rotation={[-.5, 0, -.5]}
-          position={[0, 1.3, 0]}
-          scale={[.4, .4, .4]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          Javascript
-        <meshStandardMaterial color={'#DDA77B'} castShadow  />
-      </Text3D>
-        <Text3D
-          font={latoBold}
-          rotation={[.5, 0, .5]}
-          position={[0, -1.3, 0]}
-          scale={[.4, .4, .4]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          Ruby
-        <meshStandardMaterial color={'#DDA77B'} castShadow  />
-      </Text3D>
-        <Text3D
-          font={latoBold}
-          rotation={[0, .1, -.2]}
-          position={[-4, -1.3, 0]}
-          scale={[.35, .35, .35]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          Firebase
-        <meshStandardMaterial color={'#3F84E5'} castShadow  />
-      </Text3D>
-        <Text3D
-          font={latoBold}
-          rotation={[0, -.1, .2]}
-          position={[2, -1.4, .2]}
-          scale={[.4, .4, .4]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          Blender
-        <meshStandardMaterial color={'#3F84E5'} castShadow  />
-      </Text3D>
-      </group>
+          <Text3D
+            font={latoBold}
+            rotation={[-.5, 0, -.5]}
+            position={[0, 1.3, 0]}
+            scale={[.4, .4, .4]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Javascript
+          <meshStandardMaterial color={'#DDA77B'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[.5, 0, .5]}
+            position={[0, -1.3, 0]}
+            scale={[.4, .4, .4]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Ruby
+          <meshStandardMaterial color={'#DDA77B'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[0, .1, -.2]}
+            position={[-4, -1.3, 0]}
+            scale={[.35, .35, .35]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Firebase
+          <meshStandardMaterial color={'#3F84E5'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[0, -.1, .2]}
+            position={[2, -1.4, .2]}
+            scale={[.4, .4, .4]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Blender
+          <meshStandardMaterial color={'#3F84E5'} castShadow  />
+        </Text3D>
+        </group>
       </Float>
     </PresentationControls>
 
