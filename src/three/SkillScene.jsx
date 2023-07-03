@@ -1,24 +1,36 @@
-import { Lightformer, Environment, MeshTransmissionMaterial, MeshWobbleMaterial, Html, PresentationControls, Text3D, RoundedBox, Center } from '@react-three/drei'
+import { Float, Lightformer, Environment, MeshTransmissionMaterial, MeshWobbleMaterial, Html, PresentationControls, Text3D, RoundedBox, Center } from '@react-three/drei'
 import { useFrame, useLoader, Canvas } from '@react-three/fiber'
-import { useRef, Suspense } from 'react'
+import { useRef, Suspense, useState, useEffect } from 'react'
 import * as THREE from 'three'
 
 
 export default function SkillScene() {
 
   const latoBold = './fonts/lato-bold.json'
+      // left image ref
+      const groupRef = useRef()
 
-  const portalOne = useRef();
+      // Image Scale State and Function
+      const [cubeScale, setCubeScale] = useState(1)
+      const [cubePosition, setCubePosition] = useState([0, 0, -1])
 
-  useFrame(() => {
-    // portalOne.current.position.x += .01
-    // portalOne.current.rotation.x += .001
-    // portalOne.current.rotation.y += .001
-    // portalOne.current.position.y = Math.sin(Date.now() * 0.0001) * 2
-    // portalOne.current.position.x = Math.cos(Date.now() * 0.0001) * 3
+      useEffect(() => {
+        function handleResize() {
+          const { innerWidth } = window;
+          const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
+          const scale = isMobile ? 1.3 : 1.6; // Adjust the scale values for mobile
+          const position = isMobile ? [1, 0, -1] : [-1, 0, -1]
+          setCubeScale(scale);
+          setCubePosition(position);
+        }
 
-  })
+        window.addEventListener('resize', handleResize);
+      handleResize(); // Call the function initially
 
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
 
   return <>
@@ -28,6 +40,7 @@ export default function SkillScene() {
     </Html> */}
     <ambientLight intensity={1} />
 
+    {/* Presentation Controls */}
     <PresentationControls
       enabled={true} // the controls can be disabled by setting this to false
       global={false} // Spin globally or by dragging the model
@@ -40,7 +53,8 @@ export default function SkillScene() {
       azimuth={[-Infinity, Infinity]} // Horizontal limits
       config={{ mass: 1, tension: 170, friction: 20 }} // Spring config
       >
-      <group position={[0, 0, -1]} scale={1.6} >
+        {/* Cube Group */}
+      <group position={cubePosition} scale={cubeScale} >
 
         <mesh castShadow receiveShadow position={[0, 0, 0]} >
           <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
@@ -63,17 +77,18 @@ export default function SkillScene() {
           </RoundedBox>
         </mesh>
 
-
-        <Text3D
-          font={latoBold}
-          position={[-4, -.3, .7]}
-          scale={[.5, .5, .5]}
-          letterSpacing={.15}
-          height={.2}
-        >
-          React Three Fiber
-        <meshStandardMaterial color={'#E3170A'} castShadow  />
-      </Text3D>
+        <Float speed={1} rotationIntensity={1.2} floatingRange={[-.5, .3]}>
+          <Text3D
+            font={latoBold}
+            position={[-4, -.3, .7]}
+            scale={[.5, .5, .5]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            React Three Fiber
+          <meshStandardMaterial color={'#E3170A'} castShadow  />
+        </Text3D>
+        </Float>
         <Text3D
           font={latoBold}
           rotation={[.1, 0, .2]}
@@ -129,8 +144,6 @@ export default function SkillScene() {
           Blender
         <meshStandardMaterial color={'#3F84E5'} castShadow  />
       </Text3D>
-
-
       </group>
     </PresentationControls>
 
