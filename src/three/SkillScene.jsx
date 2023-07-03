@@ -59,7 +59,7 @@ export default function SkillScene() {
       >
         {/* Cube Group */}
 
-      <Float ref={cube} speed={1} rotationIntensity={1.2} position={[-.2, .2, .2]} floatingRange={[1, 2]}>
+      <Float ref={cube} speed={1} rotationIntensity={1.2}  floatingRange={[-1, 1]}>
       <group ref={cube} position={cubePosition} scale={cubeScale} >
 
         <mesh castShadow receiveShadow position={[0, 0, 0]} >
