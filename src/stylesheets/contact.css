@@ -27,7 +27,7 @@ p,h1,h2,input,a,label,button, textarea {
   top: 70px;
   left: 30px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000000;
 }
 .contact-form {
   display: flex;

@@ -67,8 +67,8 @@ export default function SkillScene() {
               <MeshTransmissionMaterial backside
                   samples={4}
                   thickness={3}
-                  chromaticAberration={0.035}
-                  anisotropy={0.11}
+                  chromaticAberration={0.03}
+                  anisotropy={0.10}
                   distortion={0.1}
                   distortionScale={0.1}
                   temporalDistortion={0.2}
