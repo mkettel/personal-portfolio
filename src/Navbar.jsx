@@ -37,7 +37,7 @@ export default function Navbar({page, setPage}) {
         <a className="nav-link" >contact</a>
       </div>
       <div onClick={() => {setPage('three'), setActive('tile-three')}} id='tile-three' className={`nav-item ${active === 'tile-three' ? 'active' : 'none'} old-rose`}>
-        <a className="nav-link" >3D</a>
+        <a className="nav-link" >resume</a>
       </div>
     </div>
 

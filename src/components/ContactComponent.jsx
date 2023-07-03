@@ -91,7 +91,7 @@ export default function ContactComponent() {
       <div className="contact-link-bucket">
       </div>
     </div>
-    <div className='small-canvas'>
+    <div className='contact-canvas'>
         <Canvas>
         <PerspectiveCamera position={[0, 0, 0]} >
           <OrbitControls />

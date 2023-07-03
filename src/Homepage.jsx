@@ -12,6 +12,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { gsap } from "gsap";
 import SkillComponent from './components/SkillComponent'
+import ResumeComponent from './components/ResumeComponent'
 
 
 
@@ -112,18 +113,8 @@ export function Three({page, setPage}) {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content chinese-violet">
-        <div className='small-canvas'>
-          <Canvas>
-          <OrbitControls />
-
-            <mesh>
-              <boxGeometry />
-              <meshStandardMaterial />
-            </mesh>
-
-        </Canvas>
-        </div>
+      <div className="content old-rose">
+        <ResumeComponent />
       </div>
     </div>
   </>
