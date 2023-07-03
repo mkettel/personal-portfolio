@@ -32,6 +32,11 @@ h3,h2,p {
 .project-link-link i {
   color: #EEE0CB;
 }
+.project-link-link i:nth-child(1) {
+  color: #EEE0CB;
+  margin-left: 10px;
+}
+
 .project-container {
 
   --n: 1; /* number of rows*/
