@@ -1,0 +1,64 @@
+p,h1,h2,input,a,label,button {
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+.contact-container {
+  padding: 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.contact-layout {
+  display: flex;
+  margin-top: 90px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.input-field {
+  border: 2px solid #EEE0CB;
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+.input-field .input-label {
+  margin-right: 20px;
+  color: #EEE0CB;
+  text-transform: uppercase;
+}
+.input-field #name {
+  background-color: transparent;
+  background-color: #eee0cb2a;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+.input-field #name::placeholder {
+  color: black;
+  font-size: 16px;
+}
+.input-field #email {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+.input-field #phone {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+.input-field #message {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+
+}

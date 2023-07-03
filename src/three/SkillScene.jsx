@@ -18,7 +18,7 @@ export default function SkillScene() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? 1.3 : 1.6; // Adjust the scale values for mobile
+        const scale = isMobile ? 1.3 : 1.8; // Adjust the scale values for mobile
         const position = isMobile ? [1, 0, -1] : [-1, 0, -1]
         setCubeScale(scale);
         setCubePosition(position);
@@ -57,8 +57,8 @@ export default function SkillScene() {
       azimuth={[-Infinity, Infinity]} // Horizontal limits
       config={{ mass: 1, tension: 170, friction: 20 }} // Spring config
       >
-        {/* Cube Group */}
 
+      {/* Cube Group */}
       <Float ref={cube} speed={1} rotationIntensity={1.9}  floatingRange={[-1, 1]}>
         <group ref={cube} position={cubePosition} scale={cubeScale} >
 
@@ -159,6 +159,17 @@ export default function SkillScene() {
             height={.2}
           >
             Python
+          <meshStandardMaterial color={'#01FDF6'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[0.1, -.25, -.1]}
+            position={[-1.7, 1.7, -.5]}
+            scale={[.3, .3, .3]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Node
           <meshStandardMaterial color={'#01FDF6'} castShadow  />
         </Text3D>
         </group>
