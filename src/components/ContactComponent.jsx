@@ -30,10 +30,6 @@ export default function ContactComponent() {
     setMessage("");
   };
 
-  const handleButtonClick = () => {
-    formRef.current.dispatchEvent(new Event("submit"));
-  };
-
   return <>
     <div className="contact-layout">
       <div className="contact-form">
