@@ -1,6 +1,7 @@
 import Navbar from './Navbar'
 import AboutImage from './components/AboutImage'
 import ProjectComponent from './components/ProjectComponent'
+import ContactComponent from './components/ContactComponent'
 import './stylesheets/navbar.css'
 import './stylesheets/about.css'
 import './stylesheets/project.css'
@@ -95,10 +96,11 @@ export function Contact({page, setPage}) {
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
       <div className="content chinese-violet">
-        <div className="main-container .big-content">
+        <div className="contact-container .big-content">
           <div className="container-title">
             <h3>contact</h3>
           </div>
+          <ContactComponent />
         </div>
       </div>
     </div>

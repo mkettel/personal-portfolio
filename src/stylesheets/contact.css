@@ -1,0 +1,122 @@
+p,h1,h2,input,a,label,button, textarea {
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+.contact-container {
+  padding: 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: scroll;
+}
+.contact-layout {
+  display: flex;
+  /* margin-top: 80px; */
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  width: 100%;
+  z-index: 1000;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.input-field {
+  border: 2px solid #EEE0CB;
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+.input-field .input-label {
+  margin-right: 20px;
+  color: #EEE0CB;
+  text-transform: uppercase;
+}
+.input-field .input-general {
+  /* background-color: transparent */
+  background-color: #eee0cb55;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.input-field .input-general::placeholder {
+  color: #34605A;
+  font-size: 16px;
+}
+.input-field #message {
+  overflow-y: hidden scroll;
+  width: 100%;
+}
+/* button */
+.button-div {
+  border: 2px solid #EEE0CB;
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 97.5%;
+  margin: 10px 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+}
+.input-button {
+  /* border: 2px solid #EEE0CB; */
+  /* padding: 20px 20px; */
+  /* border-radius: 10px; */
+  /* margin: 10px 10px; */
+  position: absolute;
+  background-color: transparent;
+  color: #F63D01;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  animation: slide-renni 9s infinite linear;
+  display: flex;
+}
+.input-button:nth-child(2) {
+  position: absolute;
+  /* left: 20px; */
+  background-color: transparent;
+  color: #89B304;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  animation: slide-renni 10s infinite linear;
+}
+.input-button:nth-child(3) {
+  position: absolute;
+  /* left: 20px; */
+  background-color: transparent;
+  color: #151115;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  animation: slide-renni 5s infinite linear;
+}
+.input-button:nth-child(4) {
+  position: absolute;
+  /* left: 20px; */
+  background-color: transparent;
+  color: #EEE0CB;
+  text-transform: uppercase;
+  border: none;
+  font-size: 18px;
+  animation: slide-renni 7s infinite linear;
+}
+@keyframes slide-renni {
+  from {
+    left: -10%;
+  }
+  to {
+    left: 100%;
+  }
+}
