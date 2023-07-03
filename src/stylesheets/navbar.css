@@ -35,19 +35,25 @@ p,h1,h2 {
 }
 .blue-grey {
   background-color: #35605A;
+  background-color: #141115;
 }
 .tiffany-blue {
   background-color: #702632;
+  background-color: #FB62F6;
 }
 .chinese-violet {
   background-color: #DD6E42;
+  background-color: #645DD7;
 }
 .purple {
   background-color: #3F2A2B;
+  background-color: #C6F91F;
+  background-color: #8AB305;
   overflow-x: scroll;
 }
 .old-rose {
   background-color: #C17767;
+  background-color: #F63E02;
 }
 
 /* navbar container */

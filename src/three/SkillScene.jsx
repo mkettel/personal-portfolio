@@ -18,8 +18,8 @@ export default function SkillScene() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? 1.3 : 1.8; // Adjust the scale values for mobile
-        const position = isMobile ? [1, 0, -1] : [-1, 0, -1]
+        const scale = isMobile ? 1.3 : 1.9; // Adjust the scale values for mobile
+        const position = isMobile ? [1, 0, -1] : [-1.5, 0, -1]
         setCubeScale(scale);
         setCubePosition(position);
       }
@@ -77,7 +77,7 @@ export default function SkillScene() {
                   iridescenceThicknessRange={[0, 1400]}
                   side={THREE.DoubleSide}
                   blend={0}
-                  color={'#CBBAED'}
+                  color={'#FB62F6'}
                   >
               </MeshTransmissionMaterial>
             </RoundedBox>

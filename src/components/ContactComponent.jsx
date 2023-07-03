@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import '../stylesheets/contact.css'
 
-import { Preload, PerspectiveCamera } from '@react-three/drei'
+import { Preload, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import * as THREE from 'three'
-import SkillScene from '../three/SkillScene'
+import ContactScene from '../three/ContactScene'
 import Placeholder from '../three/Placeholder'
 
 
@@ -86,14 +86,13 @@ export default function ContactComponent() {
     </div>
     <div className='small-canvas'>
         <Canvas>
-        <PerspectiveCamera position={[-1, 0, -8]} >
-          {/* <OrbitControls /> */}
+        <PerspectiveCamera position={[0, 0, 0]} >
+          <OrbitControls />
           {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}
           <Suspense fallback={<Placeholder scale={3} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
-            <SkillScene />
+            <ContactScene />
           </Suspense>
           </PerspectiveCamera>
-
         </Canvas>
       </div>
 
