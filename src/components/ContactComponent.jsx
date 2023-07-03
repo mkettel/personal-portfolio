@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import '../stylesheets/contact.css'
 
 import { Preload, PerspectiveCamera, OrbitControls } from '@react-three/drei'
@@ -10,6 +10,8 @@ import Placeholder from '../three/Placeholder'
 
 
 export default function ContactComponent() {
+
+  const formRef = useRef();
 
   // State Variables
   const [name, setName] = useState('');
@@ -28,10 +30,14 @@ export default function ContactComponent() {
     setMessage("");
   };
 
+  const handleButtonClick = () => {
+    formRef.current.dispatchEvent(new Event("submit"));
+  };
+
   return <>
     <div className="contact-layout">
       <div className="contact-form">
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={handleSubmit}>
           <div className="input-field">
             <label className='input-label' htmlFor="name">Name:</label>
             <input
@@ -78,7 +84,12 @@ export default function ContactComponent() {
               required
             ></textarea>
           </div>
-          <button type="submit">Send Message</button>
+          <button className="button-div" type='submit' >
+            <div className='input-button'>Send</div>
+            <div className='input-button'>Send</div>
+            <div className='input-button'>Send</div>
+            <div className='input-button'>Send</div>
+          </button>
         </form>
       </div>
       <div className="contact-link-bucket">

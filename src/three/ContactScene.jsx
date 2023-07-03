@@ -12,7 +12,6 @@ export default function ContactScene() {
     knot.current.rotation.y += .002
     knot.current.rotation.x += .0009
     knot.current.rotation.z += .002
-    console.log(knot);
   })
 
   return <>
