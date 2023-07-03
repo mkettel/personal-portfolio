@@ -78,10 +78,6 @@ p,h1,h2,input,a,label,button, textarea {
   position: relative;
 }
 .input-button {
-  /* border: 2px solid #EEE0CB; */
-  /* padding: 20px 20px; */
-  /* border-radius: 10px; */
-  /* margin: 10px 10px; */
   position: absolute;
   background-color: transparent;
   color: #F63D01;
@@ -140,11 +136,29 @@ p,h1,h2,input,a,label,button, textarea {
     left: 10px;
   }
   .contact-form {
-    width: 93%;
+    width: 94%;
   }
 
+  .input-field {
+    padding: 15px;
+    margin: 10px 10px;
+  }
+  .input-field .input-label {
+    margin-right: 20px;
+    color: #EEE0CB;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .input-field .input-general {
+    font-size: 14px;
+  }
+  .input-field .input-general::placeholder {
+    color: #34605A;
+    font-size: 14px;
+  }
   .button-div {
     width: 94.5%;
+    margin-bottom: 20px;
   }
 
 }
