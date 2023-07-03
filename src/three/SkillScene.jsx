@@ -1,4 +1,4 @@
-import { Float, Lightformer, Environment, MeshTransmissionMaterial, MeshWobbleMaterial, Html, PresentationControls, Text3D, RoundedBox, Center } from '@react-three/drei'
+import { OrbitControls, Float, Lightformer, Environment, MeshTransmissionMaterial, MeshWobbleMaterial, Html, PresentationControls, Text3D, RoundedBox, Center } from '@react-three/drei'
 import { useFrame, useLoader, Canvas } from '@react-three/fiber'
 import { useRef, Suspense, useState, useEffect } from 'react'
 import * as THREE from 'three'
@@ -7,30 +7,34 @@ import * as THREE from 'three'
 export default function SkillScene() {
 
   const latoBold = './fonts/lato-bold.json'
-      // left image ref
-      const groupRef = useRef()
+    // left image ref
+    const groupRef = useRef()
 
-      // Image Scale State and Function
-      const [cubeScale, setCubeScale] = useState(1)
-      const [cubePosition, setCubePosition] = useState([0, 0, -1])
+    // Image Scale State and Function
+    const [cubeScale, setCubeScale] = useState(1)
+    const [cubePosition, setCubePosition] = useState([0, 0, -1])
 
-      useEffect(() => {
-        function handleResize() {
-          const { innerWidth } = window;
-          const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-          const scale = isMobile ? 1.3 : 1.6; // Adjust the scale values for mobile
-          const position = isMobile ? [1, 0, -1] : [-1, 0, -1]
-          setCubeScale(scale);
-          setCubePosition(position);
-        }
+    useEffect(() => {
+      function handleResize() {
+        const { innerWidth } = window;
+        const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
+        const scale = isMobile ? 1.3 : 1.6; // Adjust the scale values for mobile
+        const position = isMobile ? [1, 0, -1] : [-1, 0, -1]
+        setCubeScale(scale);
+        setCubePosition(position);
+      }
 
-        window.addEventListener('resize', handleResize);
-      handleResize(); // Call the function initially
+      window.addEventListener('resize', handleResize);
+    handleResize(); // Call the function initially
 
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const cube = useRef();
+
+
 
 
   return <>
@@ -54,7 +58,9 @@ export default function SkillScene() {
       config={{ mass: 1, tension: 170, friction: 20 }} // Spring config
       >
         {/* Cube Group */}
-      <group position={cubePosition} scale={cubeScale} >
+
+      <Float ref={cube} speed={1} rotationIntensity={1.2} position={[-.2, .2, .2]} floatingRange={[1, 2]}>
+      <group ref={cube} position={cubePosition} scale={cubeScale} >
 
         <mesh castShadow receiveShadow position={[0, 0, 0]} >
           <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
@@ -145,6 +151,7 @@ export default function SkillScene() {
         <meshStandardMaterial color={'#3F84E5'} castShadow  />
       </Text3D>
       </group>
+      </Float>
     </PresentationControls>
 
     <Environment >
