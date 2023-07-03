@@ -42,7 +42,7 @@ export default function SkillScene() {
     {/* <Html castShadow receiveShadow occlude="blending" position={[-6, 0, 0]} transform>
       <iframe title="embed" width={500} height={400} src="https://surf-shop-zeta.vercel.app/" frameBorder={0} />
     </Html> */}
-    <ambientLight intensity={1} />
+    <ambientLight intensity={3} />
 
     {/* Presentation Controls */}
     <PresentationControls
@@ -68,16 +68,16 @@ export default function SkillScene() {
                   samples={4}
                   thickness={3}
                   chromaticAberration={0.035}
-                  anisotropy={0.1}
+                  anisotropy={0.11}
                   distortion={0.1}
                   distortionScale={0.1}
                   temporalDistortion={0.2}
-                  iridescence={1}
+                  iridescence={3}
                   iridescenceIOR={1}
                   iridescenceThicknessRange={[0, 1400]}
                   side={THREE.DoubleSide}
                   blend={0}
-                  // color={'blue'}
+                  color={'#CBBAED'}
                   >
               </MeshTransmissionMaterial>
             </RoundedBox>
@@ -86,7 +86,7 @@ export default function SkillScene() {
           <Float speed={1} rotationIntensity={1.2} floatingRange={[-.5, .3]}>
             <Text3D
               font={latoBold}
-              position={[-4, -.3, .7]}
+              position={[-4, -.3, .6]}
               scale={[.5, .5, .5]}
               letterSpacing={.15}
               height={.2}
@@ -148,16 +148,26 @@ export default function SkillScene() {
             height={.2}
           >
             Blender
-          <meshStandardMaterial color={'#3F84E5'} castShadow  />
+          <meshStandardMaterial color={'#01FDF6'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[0.1, -.15, -.3]}
+            position={[2, 1.4, -.5]}
+            scale={[.3, .3, .3]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            Python
+          <meshStandardMaterial color={'#01FDF6'} castShadow  />
         </Text3D>
         </group>
       </Float>
     </PresentationControls>
 
     <Environment >
-
       <Lightformer type='ring' intensity={4} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={[10, 10, 1]} color={'lightblue'}/>
-      <Lightformer type={'circle'} intensity={9} rotation-x={Math.PI / 2} position={[0, -5, -9]} scale={[10, 10, 1]} color={'pink'}/>
+      <Lightformer type='circle' intensity={9} rotation-x={Math.PI / 2} position={[0, -5, -9]} scale={[10, 10, 1]} color={'#CBBAED'}/>
     </Environment>
   </>
 }

@@ -7,6 +7,7 @@ import '../stylesheets/about.css'
 import '../stylesheets/skills.css'
 import SkillScene from '../three/SkillScene'
 import { Three } from '../Homepage'
+import Placeholder from '../three/Placeholder'
 
 
 export default function SkillComponent() {
@@ -21,7 +22,10 @@ export default function SkillComponent() {
 
 
           {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}
-          <SkillScene />
+          <Suspense fallback={<Placeholder scale={3} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
+            <SkillScene />
+          </Suspense>
+
           </PerspectiveCamera>
           <Preload all />
         </Canvas>
