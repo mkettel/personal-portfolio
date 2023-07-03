@@ -1,4 +1,4 @@
-p,h1,h2,input,a,label,button {
+p,h1,h2,input,a,label,button, textarea {
   font-family: 'Clash Grotesk', sans-serif;
 }
 
@@ -8,15 +8,21 @@ p,h1,h2,input,a,label,button {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 .contact-layout {
   display: flex;
-  margin-top: 90px;
+  /* margin-top: 80px; */
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  width: 100%;
+  z-index: 1000;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
 }
 .input-field {
   border: 2px solid #EEE0CB;
@@ -31,34 +37,20 @@ p,h1,h2,input,a,label,button {
   color: #EEE0CB;
   text-transform: uppercase;
 }
-.input-field #name {
-  background-color: transparent;
-  background-color: #eee0cb2a;
+.input-field .input-general {
+  /* background-color: transparent */
+  background-color: #eee0cb55;
   padding: 10px;
   border: none;
   width: 100%;
   border-radius: 5px;
-}
-.input-field #name::placeholder {
-  color: black;
   font-size: 16px;
 }
-.input-field #email {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  border-radius: 5px;
-}
-.input-field #phone {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  border-radius: 5px;
+.input-field .input-general::placeholder {
+  color: #34605A;
+  font-size: 16px;
 }
 .input-field #message {
-  background-color: transparent;
-  border: none;
+  overflow-y: hidden scroll;
   width: 100%;
-  border-radius: 5px;
-
 }

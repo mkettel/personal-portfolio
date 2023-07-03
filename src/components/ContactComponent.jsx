@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import '../stylesheets/contact.css'
 
+import { Preload, PerspectiveCamera } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Suspense } from 'react'
+import * as THREE from 'three'
+import SkillScene from '../three/SkillScene'
+import Placeholder from '../three/Placeholder'
+
 
 export default function ContactComponent() {
 
@@ -28,6 +35,7 @@ export default function ContactComponent() {
           <div className="input-field">
             <label className='input-label' htmlFor="name">Name:</label>
             <input
+            className='input-general'
             placeholder='Matt'
             type="text"
             id='name'
@@ -38,6 +46,8 @@ export default function ContactComponent() {
           <div className="input-field">
             <label className='input-label' htmlFor="email">Email:</label>
             <input
+            className='input-general'
+              placeholder='mattkettelkamp@gmail.com'
               type="email"
               id="email"
               value={email}
@@ -48,6 +58,8 @@ export default function ContactComponent() {
           <div className="input-field">
             <label className='input-label' htmlFor="phone">Phone:</label>
             <input
+              placeholder='563-650-9916'
+              className='input-general'
               type="tel"
               id="phone"
               value={phone}
@@ -58,6 +70,8 @@ export default function ContactComponent() {
           <div className="input-field">
             <label className='input-label' htmlFor="message">Message:</label>
             <textarea
+            placeholder='Howdy! I have a cool idea, lets collaborate!'
+            className='input-general'
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -68,9 +82,20 @@ export default function ContactComponent() {
         </form>
       </div>
       <div className="contact-link-bucket">
-
       </div>
     </div>
+    <div className='small-canvas'>
+        <Canvas>
+        <PerspectiveCamera position={[-1, 0, -8]} >
+          {/* <OrbitControls /> */}
+          {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}
+          <Suspense fallback={<Placeholder scale={3} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
+            <SkillScene />
+          </Suspense>
+          </PerspectiveCamera>
+
+        </Canvas>
+      </div>
 
   </>
 }
