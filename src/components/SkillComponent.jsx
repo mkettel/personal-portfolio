@@ -1,4 +1,4 @@
-import { PerspectiveCamera, Sky, Environment, PresentationControls, MeshReflectorMaterial} from '@react-three/drei'
+import { Preload, PerspectiveCamera, Sky, Environment, PresentationControls, MeshReflectorMaterial} from '@react-three/drei'
 import { useFrame, useLoader, Canvas } from '@react-three/fiber'
 import { useRef, Suspense } from 'react'
 import * as THREE from 'three'
@@ -23,6 +23,7 @@ export default function SkillComponent() {
           {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}
           <SkillScene />
           </PerspectiveCamera>
+          <Preload all />
         </Canvas>
       </div>
   </>
