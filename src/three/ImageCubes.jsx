@@ -11,13 +11,12 @@ export default function ImageCubes() {
 
   // Textures can be used but not a must and results in a loss of color
   const [ baliMe, meSki, nameTexture, dino, centralPark, skiSlash, backie ] = useLoader(TextureLoader, [
-      './images/me_lol.jpg',
-      './images/me-ski.JPG',
-      './images/name-texture.png',
-      './images/bali-dino.jpg',
-      './images/central-park.jpg',
-      './images/ski-slash.JPEG',
-      './images/backie.JPG'
+      './images/me_lol.webp',
+      './images/me-ski.webp',
+      './images/bali-dino.webp',
+      './images/central-park.webp',
+      './images/ski-slash.webp',
+      './images/backie.webp'
     ])
 
     // left image ref
