@@ -7,9 +7,14 @@ import * as THREE from 'three'
 import ContactScene from '../three/ContactScene'
 import Placeholder from '../three/Placeholder'
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function ContactComponent() {
+
+  // toast
+  const notify = () => toast("Message Sent!");
 
   const formRef = useRef();
 
@@ -46,6 +51,7 @@ export default function ContactComponent() {
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        notify();
         // Clear form fields
         setName('');
         setEmail('');
@@ -117,6 +123,7 @@ export default function ContactComponent() {
         </form>
       </div>
       <div className="contact-link-bucket">
+        <ToastContainer theme="dark" />
       </div>
     </div>
     <div className='contact-canvas'>
