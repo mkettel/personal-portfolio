@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react'
 import '../stylesheets/contact.css'
-
 import { Preload, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import * as THREE from 'three'
 import ContactScene from '../three/ContactScene'
 import Placeholder from '../three/Placeholder'
+import emailjs from 'emailjs-com';
 
 
 export default function ContactComponent() {
@@ -24,10 +24,38 @@ export default function ContactComponent() {
     // Send form data to server or perform other actions here
 
     // Clear form fields
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+    // setName("");
+    // setEmail("");
+    // setPhone("");
+    // setMessage("");
+
+    // EmailJS configuration
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      from_phone: phone,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        'service_uai8ehu',
+        'template_4e3s1qk',
+        templateParams,
+        'Va4VHUD5yDsVNn35-'
+      )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        // Clear form fields
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('ERROR!', error);
+      });
+
   };
 
   return <>

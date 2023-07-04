@@ -27,7 +27,7 @@ export default function SkillComponent() {
           </Suspense>
 
           </PerspectiveCamera>
-          <Preload all />
+          {/* <Preload all /> */}
         </Canvas>
       </div>
   </>
