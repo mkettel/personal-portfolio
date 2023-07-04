@@ -1,6 +1,5 @@
 import './stylesheets/navbar.css'
 import { useState, useEffect } from 'react'
-import { Link } from 'wouter';
 
 export default function Navbar({page, setPage}) {
 
@@ -12,15 +11,13 @@ export default function Navbar({page, setPage}) {
     setActive(`tile-${page}`)
   }, [page]);
 
-
-
   return <>
     <div className="header-container grey">
       <h1>Matthew Kettelkamp</h1>
       <div className="link-box">
         <a href="https://github.com/mkettel" target='_blank'>Github</a>
         <a href="https://www.linkedin.com/in/matthew-kettelkamp-100490b2/" target='_blank'>LinkedIn</a>
-        <a href="#">Email</a>
+        <a href="mailto:mattkettelkamp@gmail.com">Email</a>
       </div>
     </div>
     <div className="navbar-container nav">
