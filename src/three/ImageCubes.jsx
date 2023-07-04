@@ -46,7 +46,7 @@ export default function ImageCubes() {
 
           {/* Bottom Image */}
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.webp'}  />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino-comp.webp'}  />
           </mesh>
 
           {/* Front Image */}
@@ -71,7 +71,7 @@ export default function ImageCubes() {
 
           {/* Back Side Image */}
           <mesh  position={[0, 0, -2.01]} rotation={[ Math.PI, 0, Math.PI ]}>
-            <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/backie.webp'} />
+            <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/backie-comp.webp'} />
           </mesh>
         </group>
   </>
