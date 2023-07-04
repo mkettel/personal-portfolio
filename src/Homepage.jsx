@@ -6,14 +6,9 @@ import './stylesheets/navbar.css'
 import './stylesheets/about.css'
 import './stylesheets/project.css'
 import './stylesheets/skills.css'
-import { useState } from 'react'
-import * as THREE from 'three'
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { gsap } from "gsap";
+import { useState, memo } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
-
 
 
 export default function Homepage() {
@@ -31,12 +26,9 @@ export default function Homepage() {
   } else if (page === 'three') {
     return <Three page={page} setPage={setPage} />
   }
-
 }
 
-
-
-export function About({page, setPage}) {
+export const About = memo(({page, setPage}) => {
 
   return<>
   <div className="home-root">
@@ -54,9 +46,9 @@ export function About({page, setPage}) {
       </div>
     </div>
   </>
-}
+})
 
-export function Skills({page, setPage}) {
+export const Skills = memo(({page, setPage}) => {
 
   return<>
   <div className="home-root">
@@ -71,9 +63,9 @@ export function Skills({page, setPage}) {
       </div>
     </div>
   </>
-}
+});
 
-export function Projects({page, setPage}) {
+export const Projects = memo(({page, setPage}) => {
 
   return<>
   <div className="home-root">
@@ -88,10 +80,9 @@ export function Projects({page, setPage}) {
       </div>
     </div>
   </>
-}
+});
 
-
-export function Contact({page, setPage}) {
+export const Contact = memo(({page, setPage}) => {
 
   return<>
   <div className="home-root">
@@ -106,9 +97,9 @@ export function Contact({page, setPage}) {
       </div>
     </div>
   </>
-}
+});
 
-export function Three({page, setPage}) {
+export const Three = memo(({page, setPage}) => {
 
   return<>
   <div className="home-root">
@@ -118,4 +109,4 @@ export function Three({page, setPage}) {
       </div>
     </div>
   </>
-}
+});

@@ -34,25 +34,19 @@ p,h1,h2 {
   background-color: transparent;
 }
 .blue-grey {
-  background-color: #35605A;
   background-color: #141115;
 }
 .tiffany-blue {
-  background-color: #702632;
   background-color: #FB62F6;
 }
 .chinese-violet {
-  background-color: #DD6E42;
   background-color: #645DD7;
 }
 .purple {
-  background-color: #3F2A2B;
-  background-color: #C6F91F;
   background-color: #8AB305;
   overflow-x: scroll;
 }
 .old-rose {
-  background-color: #C17767;
   background-color: #F63E02;
 }
 
@@ -86,22 +80,11 @@ p,h1,h2 {
   color: #DD6E42;
 }
 .navbar-container {
-
   --n: 5; /* number of rows*/
   --m: 1; /* number of columns */
   --g: 8px;  /* control the gap */
   --f: .15;   /* control the scale factor */
   --s: .05; /* standard size */
-
-  /* display: grid; */
-  /* grid-template-columns: repeat(var(--m), auto); */
-  /* gap: var(--g); */
-  /* margin-top: 12px; */
-  /* width: 195px; */
-  /* overflow-y: scroll; */
-  /* height: 77vh; */
-  /* position: sticky; */
-  /* top: 0; */
   display: flex;
   flex-direction: column;
   width: 195px;
@@ -118,8 +101,6 @@ p,h1,h2 {
   align-items: center;
   width: calc(77vh*var(--s)/var(--n));
   height: calc(100vw*var(--s)/var(--m));
-  /* width: 180px; */
-  /* height: 70px; */
   border: 1px solid transparent;
   border-radius: 10px;
   position: relative;
@@ -128,9 +109,6 @@ p,h1,h2 {
   cursor: pointer;
   transition: .3s ease-in-out;
 }
-/* .none {
-  animation: shrink .5s ease-in-out forwards;
-} */
 .nav-item:hover {
   cursor: pointer;
   background-color: transparent;
@@ -186,11 +164,10 @@ p,h1,h2 {
 /* CONTENT CONTAINER  */
 .content {
   width: calc(100% - 197px);
-  /* border: 1px solid black; */
   border-radius: 10px;
   margin-top: 12px;
   position: relative;
-  animation: fade .5s ease-in-out;
+  animation: fade .7s ease-in-out;
   display: flex;
   align-items: center;
 }
@@ -218,12 +195,11 @@ p,h1,h2 {
   color: #EEE0CB
 }
 
-
 @keyframes fade {
   0% {
     opacity: 0;
   }
-  70% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -316,6 +292,4 @@ p,h1,h2 {
     font-size: 18px;
     color: #EEE0CB
   }
-
-
 }
