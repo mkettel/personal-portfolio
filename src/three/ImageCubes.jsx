@@ -51,22 +51,22 @@ export default function ImageCubes() {
 
           {/* Front Image */}
             <mesh position={[0, 0, 0.01]} rotation={[0, 0, 0]} >
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski.webp'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski-comp.webp'} />
             </mesh>
 
           {/* Left Side Image */}
           <mesh  position={[-1.01, 0, -1]} rotation={[0, -Math.PI / 2, 0]}>
-              <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol.webp'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol-comp.webp'} />
           </mesh>
 
           {/* Right Side Image */}
           <mesh  position={[1.01, 0, -1]} rotation={[0, Math.PI / 2, 0]}>
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/central-park.webp'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/central-park-comp.webp'} />
           </mesh>
 
           {/* Top Side Image */}
           <mesh  position={[0, 1.01, -1]} rotation={[ -Math.PI / 2 , 0, 0]}>
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/ski-slash.webp'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/ski-slash-comp.webp'} />
           </mesh>
 
           {/* Back Side Image */}
