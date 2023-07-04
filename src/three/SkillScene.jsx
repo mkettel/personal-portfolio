@@ -18,7 +18,7 @@ export default function SkillScene() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? 1.4 : 1.9; // Adjust the scale values for mobile
+        const scale = isMobile ? 1.4 : 1.8; // Adjust the scale values for mobile
         const position = isMobile ? [1, 0, -1] : [-1.5, 0, -1]
         setCubeScale(scale);
         setCubePosition(position);
@@ -67,7 +67,7 @@ export default function SkillScene() {
               <MeshTransmissionMaterial backside
                   samples={4}
                   thickness={3}
-                  chromaticAberration={0.03}
+                  chromaticAberration={0.02}
                   anisotropy={0.10}
                   distortion={0.1}
                   distortionScale={0.1}

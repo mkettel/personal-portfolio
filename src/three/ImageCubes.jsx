@@ -68,42 +68,42 @@ export default function ImageCubes() {
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={dino} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.jpg'}  />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.webp'}  />
           </mesh>
 
           {/* Front Image */}
             <mesh position={[0, 0, 0.01]} rotation={[0, 0, 0]} >
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={meSki} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski.JPG'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski.webp'} />
             </mesh>
 
           {/* Left Side Image */}
           <mesh  position={[-1.01, 0, -1]} rotation={[0, -Math.PI / 2, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={baliMe} />
-              <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol.jpg'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol.webp'} />
           </mesh>
 
           {/* Right Side Image */}
           <mesh  position={[1.01, 0, -1]} rotation={[0, Math.PI / 2, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={centralPark} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/central-park.jpg'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/central-park.webp'} />
           </mesh>
 
           {/* Top Side Image */}
           <mesh  position={[0, 1.01, -1]} rotation={[ -Math.PI / 2 , 0, 0]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={skiSlash} />
-              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/ski-slash.JPEG'} />
+              <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/ski-slash.webp'} />
           </mesh>
 
           {/* Back Side Image */}
           <mesh  position={[0, 0, -2.01]} rotation={[ Math.PI, 0, Math.PI ]}>
             {/* <boxGeometry args={[2, 2, .05]} /> */}
             <meshStandardMaterial map={backie} />
-            <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/backie.JPG'} />
+            <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/backie.webp'} />
           </mesh>
 
         </group>
