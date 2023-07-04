@@ -1,23 +1,9 @@
-import { Image, Text, OrbitControls, SpotLight, Center} from '@react-three/drei'
-import { useFrame, useLoader, Canvas } from '@react-three/fiber'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import { Image } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 import { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
 
-
-
 export default function ImageCubes() {
-
-
-  // Textures can be used but not a must and results in a loss of color
-  const [ baliMe, meSki, nameTexture, dino, centralPark, skiSlash, backie ] = useLoader(TextureLoader, [
-      './images/me_lol.webp',
-      './images/me-ski.webp',
-      './images/bali-dino.webp',
-      './images/central-park.webp',
-      './images/ski-slash.webp',
-      './images/backie.webp'
-    ])
 
     // left image ref
     const groupRef = useRef()
@@ -35,7 +21,6 @@ export default function ImageCubes() {
         setImageScale(scale);
         setImagePosition(position);
       }
-
       window.addEventListener('resize', handleResize);
     handleResize(); // Call the function initially
 
@@ -56,58 +41,38 @@ export default function ImageCubes() {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
 
-
   return <>
-
-
-      {/* <Center> */}
         <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
 
           {/* Bottom Image */}
           <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={dino} />
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino.webp'}  />
           </mesh>
 
           {/* Front Image */}
             <mesh position={[0, 0, 0.01]} rotation={[0, 0, 0]} >
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={meSki} />
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/me-ski.webp'} />
             </mesh>
 
           {/* Left Side Image */}
           <mesh  position={[-1.01, 0, -1]} rotation={[0, -Math.PI / 2, 0]}>
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={baliMe} />
               <Image raycast={() => null} scale={[2, 2, 1]} transparent side={THREE.DoubleSide} url={'./images/me_lol.webp'} />
           </mesh>
 
           {/* Right Side Image */}
           <mesh  position={[1.01, 0, -1]} rotation={[0, Math.PI / 2, 0]}>
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={centralPark} />
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/central-park.webp'} />
           </mesh>
 
           {/* Top Side Image */}
           <mesh  position={[0, 1.01, -1]} rotation={[ -Math.PI / 2 , 0, 0]}>
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={skiSlash} />
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/ski-slash.webp'} />
           </mesh>
 
           {/* Back Side Image */}
           <mesh  position={[0, 0, -2.01]} rotation={[ Math.PI, 0, Math.PI ]}>
-            {/* <boxGeometry args={[2, 2, .05]} /> */}
-            <meshStandardMaterial map={backie} />
             <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/backie.webp'} />
           </mesh>
-
         </group>
-      {/* </Center> */}
-
-
   </>
 }
