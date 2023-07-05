@@ -115,7 +115,7 @@ export default function SkillScene() {
             height={.2}
           >
             Javascript
-          <meshStandardMaterial color={'#DDA77B'} castShadow  />
+          <meshStandardMaterial color={'#F5F749'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
