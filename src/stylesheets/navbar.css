@@ -254,7 +254,7 @@ p,h1,h2 {
   .nav-item.active {
 
     min-height: 90px;
-    min-width: 70px;
+    min-width: 65px;
   }
   .nav-link {
     font-size: 16px;
