@@ -30,8 +30,8 @@ export default function ImageCubes() {
   }, []);
 
   useFrame((state, delta) => {
-    // groupRef.current.rotation.y -= .009 * delta;
-    // groupRef.current.rotation.x -= .008 * delta;
+    groupRef.current.rotation.y -= .002 * delta;
+    groupRef.current.rotation.x -= .002 * delta;
   })
 
   // Hover state for cube
