@@ -5,7 +5,7 @@ import * as THREE from 'three'
 
 export default function ImageCubes() {
 
-    // left image ref
+    // Cube ref
     const groupRef = useRef()
 
     // Image Scale State and Function
@@ -39,13 +39,15 @@ export default function ImageCubes() {
 
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
-  }, [hovered])
+    console.log(document.body.style.cursor = hovered ? 'pointer !important' : 'auto'
+    );
+  }, [hovered]);
 
   return <>
         <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
 
           {/* Bottom Image */}
-          <mesh  position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]}>
+          <mesh position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
               <Image raycast={() => null} scale={[2, 2, 1]} side={THREE.DoubleSide} url={'./images/bali-dino-comp.webp'}  />
           </mesh>
 
