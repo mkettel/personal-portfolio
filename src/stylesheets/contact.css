@@ -18,7 +18,7 @@ p,h1,h2,input,a,label,button, textarea {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .contact-layout {
   display: flex;
