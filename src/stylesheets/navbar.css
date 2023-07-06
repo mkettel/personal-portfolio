@@ -90,6 +90,7 @@ p,h1,h2 {
   width: 195px;
   gap: 8px;
   margin-top: 12px;
+  height: 75vh;
 }
 .nav {
   position: sticky;
@@ -99,15 +100,18 @@ p,h1,h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(77vh*var(--s)/var(--n));
-  height: calc(100vw*var(--s)/var(--m));
+  /* width: calc(77vh*var(--s)/var(--n)); */
+  /* height: calc(100vw*var(--s)/var(--m)); */
+  width: 180px;
+  height: 100%;
   border: 1px solid transparent;
   border-radius: 10px;
   position: relative;
-  min-height: 70px;
-  min-width: 180px;
+  /* min-height: 70px; */
+  /* min-width: 180px; */
   cursor: pointer;
   transition: .3s ease-in-out;
+  overflow: hidden;
 }
 .nav-item:hover {
   cursor: pointer;
@@ -120,11 +124,13 @@ p,h1,h2 {
   transition: .3s all;
 }
 .nav-item.active {
-  width: calc(77vh*var(--f)/var(--n));
-  height: calc(100vw*var(--f)/var(--m));
+  /* width: calc(77vh*var(--f)/var(--n)); */
+  /* height: calc(100vw*var(--f)/var(--m)); */
+  width: 180;
+  height: 190%;
   cursor: pointer;
-  min-height: 70px;
-  min-width: 180px;
+  /* min-height: 70px; */
+  /* min-width: 180px; */
   background-color: transparent;
   transition: .4s ease-in-out;
   border: 1px solid black;
@@ -207,7 +213,8 @@ p,h1,h2 {
   }
 }
 
-@media only screen and  (min-width: 200px) and (max-width: 700px) {
+/* Regular Devices */
+@media only screen and  (min-width: 201px) and (max-width: 560px) {
 
   .header-container {
     padding: 0px 15px;
@@ -244,17 +251,21 @@ p,h1,h2 {
     width: 100%;
     gap: 8px;
     margin-top: 12px;
+    overflow-x: scroll;
+    height: 12vh;
   }
   .nav-item {
-    width: calc(77vh*var(--s)/var(--n));
-    height: calc(100vw*var(--s)/var(--m));
-    min-height: 80px;
-    min-width: 65px;
+    /* width: calc(77vh*var(--s)/var(--n)); */
+    /* height: calc(100vw*var(--s)/var(--m)); */
+    /* min-height: 80px; */
+    /* min-width: 65px; */
+    width: 100%;
+    height: 75%;
   }
   .nav-item.active {
 
-    min-height: 90px;
-    min-width: 65px;
+    width: 100%;
+    height: 95%;
   }
   .nav-link {
     font-size: 16px;
