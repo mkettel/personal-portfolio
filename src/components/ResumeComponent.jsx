@@ -20,8 +20,8 @@ export default function ResumeComponent() {
          const { innerWidth } = window;
          const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
          const width = isMobile ? 450 : 1185; // Adjust the scale values for mobile
-         const height = isMobile ? 500 : 500;
-         const position = isMobile ? [0, -.2, 0] : [0, -.2, 0];
+         const height = isMobile ? 485 : 500;
+         const position = isMobile ? [0, -.22, 0] : [0, -.2, 0];
          setViewWidth(width);
          setViewHeight(height);
          setScreenPosition(position);
