@@ -29,6 +29,8 @@ p,h1,h2,input,a,label,button, textarea {
   left: 30px;
   width: 100%;
   z-index: 1000000;
+  animation: fade .5s linear 1s forwards;
+  opacity: 0;
 }
 .contact-form {
   display: flex;
@@ -127,6 +129,17 @@ p,h1,h2,input,a,label,button, textarea {
   }
   to {
     left: 100%;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

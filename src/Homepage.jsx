@@ -6,7 +6,7 @@ import './stylesheets/navbar.css'
 import './stylesheets/about.css'
 import './stylesheets/project.css'
 import './stylesheets/skills.css'
-import { useState, memo } from 'react'
+import { useState, memo, useEffect } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
 
@@ -14,6 +14,7 @@ import ResumeComponent from './components/ResumeComponent'
 export default function Homepage() {
 
   const [page, setPage] = useState('about');
+
 
   if (page === 'about') {
     return <About page={page} setPage={setPage} />
@@ -28,7 +29,10 @@ export default function Homepage() {
   }
 }
 
+
 export const About = memo(({page, setPage}) => {
+
+  console.log(useEffect);
 
   return<>
   <div className="home-root">

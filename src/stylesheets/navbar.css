@@ -110,7 +110,7 @@ p,h1,h2 {
   /* min-height: 70px; */
   /* min-width: 180px; */
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: .9s all;
   overflow: hidden;
 }
 .nav-item:hover {
@@ -132,11 +132,12 @@ p,h1,h2 {
   /* min-height: 70px; */
   /* min-width: 180px; */
   background-color: transparent;
-  transition: .4s ease-in-out;
+  transition: .9s all;
   border: 1px solid black;
 }
 .nav-item.active a {
   color: black;
+  transition: .9s all;
 }
 .nav-link {
   font-size: 22px;
@@ -145,25 +146,21 @@ p,h1,h2 {
 @keyframes grow {
   0% {
     width: 180px;
-    height: 70px;
-    min-height: 70px;
-    min-width: 180px;
+    height: 100%;
   }
   100% {
-    height: 150px;
     width: 180px;
+    height: 190%;
   }
 }
 @keyframes shrink {
   0% {
-    height: 150px;
+    height: 190%;
     width: 180px;
   }
   100% {
+    height: 100%;
     width: 180px;
-    height: 70px;
-    min-height: 70px;
-    min-width: 180px;
   }
 }
 
@@ -194,11 +191,15 @@ p,h1,h2 {
   text-transform: uppercase;
   font-weight: 500;
   margin: 0px;
-  color: #EEE0CB
+  color: #EEE0CB;
+  opacity: 0;
+  animation: fade .5s linear .7s forwards;
 }
 .container-title p {
   font-size: 22px;
-  color: #EEE0CB
+  color: #EEE0CB;
+  opacity: 0;
+  animation: fade .8s linear .9s forwards;
 }
 
 @keyframes fade {
