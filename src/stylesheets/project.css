@@ -218,13 +218,13 @@ h3,h2,p {
     padding: 30px 20px 20px 20px;
   }
   .screen-overlay {
-    height: 155%;
+    height: 160%;
   }
   .project-card:nth-child(5) .screen-overlay {
-    height: 165%;
+    height: 170%;
   }
   .project-card:nth-child(6) .screen-overlay {
-    height: 170%;
+    height: 175%;
   }
 
   .project-card {
@@ -240,6 +240,14 @@ h3,h2,p {
     bottom: 15px;
     left: 0px;
   }
+  .project-card:nth-child(2) .project-lang {
+    width: 120%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    animation: slider 14s infinite linear;
+  }
   .project-card .project-lang p {
     margin-right: 20px;
     font-size: 14px;
@@ -250,7 +258,7 @@ h3,h2,p {
 
   .project-card .project-desc {
     position: absolute;
-    bottom: -155px;
+    bottom: -165px;
     left: 25px;
     width: 85%;
   }
@@ -262,13 +270,13 @@ h3,h2,p {
   }
   .project-card:nth-child(5) .project-desc {
     position: absolute;
-    bottom: -175px;
+    bottom: -185px;
     left: 25px;
     width: 91%;
   }
   .project-card:nth-child(6) .project-desc {
     position: absolute;
-    bottom: -210px;
+    bottom: -220px;
     left: 25px;
     width: 91%;
   }
