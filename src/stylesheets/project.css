@@ -188,7 +188,7 @@ h3,h2,p {
 }
 .project-card .project-desc {
   position: absolute;
-  bottom: -130px;
+  bottom: -140px;
   left: 25px;
   width: 91%;
 }
@@ -264,7 +264,7 @@ h3,h2,p {
   }
   .project-card:nth-child(2) .project-desc {
     position: absolute;
-    bottom: -160px;
+    bottom: -175px;
     left: 25px;
     width: 91%;
   }
