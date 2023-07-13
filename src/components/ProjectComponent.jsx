@@ -20,7 +20,7 @@ export default function ProjectComponent() {
       lang: ['React', 'React Three Fiber', 'GSAP', 'Blender'],
       link: "https://homebase-mkettel.vercel.app/",
       gh: 'https://github.com/mkettel/HomeBase',
-      desc: 'I built this knowledgebase website using React, React Three Fiber. I made the model of the house using Blender. The house is interactive, where you can click on components of the scene to be taken to pages with corresponding videos. The videos are further filtered by each season of the year.'
+      desc: 'I built this knowledgebase website using React, React Three Fiber. I made the model of the house using Blender. The house is interactive, where you can click on components of the scene to be taken to pages with their corresponding videos. The videos are further filtered by each season of the year.'
     },
     {
       id: 3,
