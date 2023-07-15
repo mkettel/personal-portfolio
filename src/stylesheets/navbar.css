@@ -77,7 +77,7 @@ p,h1,h2 {
   font-weight: 500;
 }
 .link-box a:hover {
-  color: #DD6E42;
+  color: #F63D01;
 }
 .navbar-container {
   --n: 5; /* number of rows*/
