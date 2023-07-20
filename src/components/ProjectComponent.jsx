@@ -37,7 +37,7 @@ export default function ProjectComponent() {
       videoUrl: '/videos/jolt-recording.mp4',
       lang: ['React', 'Node.js', 'Firebase', 'GSAP'],
       gh: 'https://github.com/mkettel/Jolt',
-      desc: 'Working with a client who is a 3rd grade teacher, I built a chrome extension that has a library of carefully curated short form videos that can be selected and placed into the teachers curriculum. They are sorted by topic and utilizes firebase for the backend.'
+      desc: 'Working with a client who is a 3rd-grade teacher, I built a chrome extension that has a library of carefully curated short-form videos that can be selected and placed into the teachers curriculum. They are sorted by topic and utilize firebase for the backend.'
     },
     {
       id: 5,

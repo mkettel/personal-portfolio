@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import '../stylesheets/contact.css'
 import { Preload, PerspectiveCamera, OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { Suspense } from 'react'
 import * as THREE from 'three'
 import ContactScene from '../three/ContactScene'
@@ -9,6 +9,7 @@ import Placeholder from '../three/Placeholder'
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { easing } from "maath"
 
 
 export default function ContactComponent() {
@@ -137,6 +138,5 @@ export default function ContactComponent() {
           </PerspectiveCamera>
         </Canvas>
       </div>
-
   </>
 }

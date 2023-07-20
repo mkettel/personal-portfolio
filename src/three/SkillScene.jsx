@@ -4,6 +4,7 @@ import { useRef, Suspense, useState, useEffect } from 'react'
 import * as THREE from 'three'
 
 
+
 export default function SkillScene() {
 
   const latoBold = './fonts/lato-bold.json'
@@ -33,8 +34,6 @@ export default function SkillScene() {
   }, []);
 
   const cube = useRef();
-
-
 
 
   return <>
