@@ -1,0 +1,10 @@
+
+
+.blog-container {
+  height: 100vh;
+  width: 30vh;
+  position: relative;
+}
+.blog-container p {
+  color: black;
+}
