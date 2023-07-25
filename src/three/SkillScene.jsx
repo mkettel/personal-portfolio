@@ -35,13 +35,13 @@ export default function SkillScene() {
 
   const cube = useRef();
 
+  const points = useRef();
+
 
   return <>
 
-    {/* <Html castShadow receiveShadow occlude="blending" position={[-6, 0, 0]} transform>
-      <iframe title="embed" width={500} height={400} src="https://surf-shop-zeta.vercel.app/" frameBorder={0} />
-    </Html> */}
     <ambientLight intensity={3} />
+    {/* <directionalLight position={[1, 0, 10]} intensity={3} iridescence={3} /> */}
 
     {/* Presentation Controls */}
     <PresentationControls
@@ -54,7 +54,7 @@ export default function SkillScene() {
       rotation={[.1, 0, 0]} // Default rotation
       polar={[0, Math.PI / 2]} // Vertical limits
       azimuth={[-Infinity, Infinity]} // Horizontal limits
-      config={{ mass: 1, tension: 170, friction: 20 }} // Spring config
+      config={{ mass: 1, tension: 100, friction: 20 }} // Spring config
       >
 
       {/* Cube Group */}
@@ -63,20 +63,24 @@ export default function SkillScene() {
 
           <mesh castShadow receiveShadow position={[0, 0, 0]} >
             <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
-              <MeshTransmissionMaterial backside
+              <MeshTransmissionMaterial
+                  backside
                   samples={4}
-                  thickness={3}
+                  thickness={1.5}
+                  ior={1.9}
                   chromaticAberration={0.02}
-                  anisotropy={0.10}
-                  distortion={0.1}
-                  distortionScale={0.1}
+                  anisotropy={0.12}
+                  distortion={0.12}
+                  distortionScale={0.19}
                   temporalDistortion={0.2}
-                  iridescence={3}
+                  iridescence={2}
                   iridescenceIOR={1}
                   iridescenceThicknessRange={[0, 1400]}
                   side={THREE.DoubleSide}
                   blend={0}
                   color={'#FB62F6'}
+                  attenuationColor={'blue'}
+                  background={'yellow'}
                   >
               </MeshTransmissionMaterial>
             </RoundedBox>

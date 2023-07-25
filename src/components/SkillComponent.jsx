@@ -15,10 +15,13 @@ export default function SkillComponent() {
   return <>
     <div className='small-canvas'>
         <Canvas>
-          {/* <color attach="background" args={['#6F2632']} /> */}
+          {/* <color attach="background" args={['#FB62F6']} /> */}
           <PerspectiveCamera position={[-1, 0, -8]} >
           {/* <OrbitControls /> */}
-          <ambientLight intensity={.2} />
+          {/* <ambientLight intensity={1}  /> */}
+          <directionalLight position={[2, 0, 0]} intensity={2} color='#FB62F6' />
+          <directionalLight position={[-2, 0, 0]} intensity={2} />
+
 
 
           {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}

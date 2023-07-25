@@ -129,7 +129,7 @@ export default function ContactComponent() {
     </div>
     <div className='contact-canvas'>
         <Canvas>
-        <PerspectiveCamera position={[0, 0, 0]} >
+          <PerspectiveCamera position={[0, 0, 0]} >
           <OrbitControls />
           {/* <Sky distance={450000} sunPosition={[0, -1, 0]} inclination={0} azimuth={0.25} /> */}
           <Suspense fallback={<Placeholder scale={3} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
