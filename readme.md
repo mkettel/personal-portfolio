@@ -5,6 +5,13 @@ I built this portfolio to demonstrate how much I enjoy the creative and intellec
 
 Please check out the project [here!](https://matthewkettelkamp.com/)
 
+##Languages, Frameworks and Tools Used
+- React
+- React Three Fiber (Three.js)
+- HTML
+- CSS
+- Blender
+
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
 Run the following commands:
