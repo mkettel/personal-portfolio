@@ -1,8 +1,11 @@
 # Personal Portfolio
 
+## Summary
+I built this portfolio to demonstrate how much I enjoy the creative and intellectual aspects of programming to showcase some of my most recent projects that I have built. It is an ongoing project and I hope that you enjoy the outcome :)
+
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+Run the following commands:
 
 ``` bash
 # Install dependencies (only the first time)
