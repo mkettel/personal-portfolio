@@ -15,7 +15,7 @@ export default function AboutImage() {
 
   return <>
       <div className='small-canvas'>
-        <Canvas>
+        <Canvas frameloop='demand'>
           <PerspectiveCamera position={[0, 0, 0]} />
           <OrbitControls autoRotate autoRotateSpeed={.5} />
           <ambientLight intensity={.5} />

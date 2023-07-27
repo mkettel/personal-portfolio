@@ -1,6 +1,5 @@
-import { OrbitControls, Float, Lightformer, Environment, MeshTransmissionMaterial, MeshWobbleMaterial, Html, PresentationControls, Text3D, RoundedBox, Center } from '@react-three/drei'
-import { useFrame, useLoader, Canvas } from '@react-three/fiber'
-import { useRef, Suspense, useState, useEffect } from 'react'
+import { MeshReflectorMaterial, Float, Lightformer, Environment, MeshTransmissionMaterial, PresentationControls, Text3D, RoundedBox } from '@react-three/drei'
+import { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
 
 
@@ -36,7 +35,6 @@ export default function SkillScene() {
   const cube = useRef();
 
   const points = useRef();
-
 
   return <>
 
@@ -95,7 +93,7 @@ export default function SkillScene() {
               height={.2}
             >
               React Three Fiber
-            <meshStandardMaterial color={'#E3170A'} castShadow  />
+            <MeshReflectorMaterial color={'#E3170A'} castShadow  />
           </Text3D>
           </Float>
           <Text3D
