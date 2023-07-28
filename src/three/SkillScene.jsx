@@ -38,7 +38,7 @@ export default function SkillScene() {
 
   return <>
 
-    <ambientLight intensity={3} />
+    <ambientLight castShadow intensity={3} />
     {/* <directionalLight position={[1, 0, 10]} intensity={3} iridescence={3} /> */}
 
     {/* Presentation Controls */}
@@ -49,18 +49,18 @@ export default function SkillScene() {
       snap={false} // Snap-back to center (can also be a spring config)
       speed={.5} // Speed factor
       zoom={1} // Zoom factor when half the polar-max is reached
-      rotation={[.1, 0, 0]} // Default rotation
-      polar={[0, Math.PI / 2]} // Vertical limits
+      rotation={[0, 0, 0]} // Default rotation
+      polar={[-0.5, Math.PI / 2]} // Vertical limits
       azimuth={[-Infinity, Infinity]} // Horizontal limits
-      config={{ mass: 1, tension: 100, friction: 20 }} // Spring config
+      config={{ mass: 2, tension: 300, friction: 20 }} // Spring config
       >
 
       {/* Cube Group */}
       <Float ref={cube} speed={1} rotationIntensity={1.8}  floatingRange={[-1, 1]}>
         <group ref={cube} position={cubePosition} scale={cubeScale} >
 
-          <mesh castShadow receiveShadow position={[0, 0, 0]} >
-            <RoundedBox args={[9, 5, 5]} castShadow receiveShadow radius={.5} >
+          <mesh castShadow position={[0, 0, 0]} >
+            <RoundedBox args={[9, 5, 5]} castShadow  radius={.5} >
               <MeshTransmissionMaterial
                   backside
                   samples={4}
