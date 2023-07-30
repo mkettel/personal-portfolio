@@ -18,7 +18,7 @@ export default function AboutImage() {
         <Canvas frameloop='demand'>
           <PerspectiveCamera position={[0, 0, 0]} />
           <OrbitControls autoRotate autoRotateSpeed={.4} />
-          <ambientLight intensity={.5} />
+          <ambientLight intensity={.4} />
 
           <Suspense fallback={<Placeholder scale={1.5} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
             <Center>
