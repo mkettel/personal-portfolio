@@ -171,7 +171,18 @@ export default function SkillScene() {
             height={.2}
           >
             Node
-          <meshStandardMaterial color={'#01FDF6'} castShadow  />
+          <meshStandardMaterial color={'#D1345B'} castShadow  />
+        </Text3D>
+          <Text3D
+            font={latoBold}
+            rotation={[0.1, -.25, -.1]}
+            position={[-2.4, .8, -1.4]}
+            scale={[.3, .3, .3]}
+            letterSpacing={.15}
+            height={.2}
+          >
+            C#
+          <meshStandardMaterial color={'#0E34A0'} castShadow  />
         </Text3D>
         </group>
       </Float>
