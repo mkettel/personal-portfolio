@@ -34,8 +34,6 @@ export default function SkillScene() {
 
   const cube = useRef();
 
-  const points = useRef();
-
   return <>
 
     <ambientLight castShadow intensity={3} />
