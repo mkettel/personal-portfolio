@@ -9,6 +9,8 @@ import './stylesheets/skills.css'
 import { useState, memo, useEffect } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
+import { motion } from "framer-motion"
+import { useMotionValue, useTransform } from "framer-motion"
 
 
 export default function Homepage() {

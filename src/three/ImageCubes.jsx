@@ -2,6 +2,8 @@ import { Image } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
+import { motion } from "framer-motion"
+
 
 export default function ImageCubes() {
 
