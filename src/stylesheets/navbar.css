@@ -192,12 +192,7 @@ p,h1,h2 {
   opacity: 0;
   animation: fade .5s linear .7s forwards;
 }
-.container-title p {
-  font-size: 22px;
-  color: #EEE0CB;
-  opacity: 0;
-  animation: fade .8s linear .9s forwards;
-}
+
 
 @keyframes fade {
   0% {

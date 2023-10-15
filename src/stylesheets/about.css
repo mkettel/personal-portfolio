@@ -13,6 +13,18 @@
 .small-canvas:hover {
   cursor: pointer;
 }
+.container-title .top-text {
+  font-size: 22px;
+  color: #EEE0CB;
+  opacity: 0;
+  animation: fade .8s linear .9s forwards;
+}
+.container-title .spin-label {
+  font-size: 18px;
+  color: #EEE0CB;
+  opacity: 0;
+  animation: fade .8s linear .9s forwards;
+}
 
 @media only screen and  (min-width: 200px) and (max-width: 700px) {
 

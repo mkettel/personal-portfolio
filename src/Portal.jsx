@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import PortalScene from './three/PortalScene';
 import './stylesheets/portal.css'
+import { motion } from "framer-motion-3d"
+import Framer from './three/Framer';
 
 
 
@@ -17,7 +19,8 @@ export default function Portal() {
       <Canvas >
         <OrbitControls />
 
-        <PortalScene />
+        {/* <PortalScene /> */}
+        <Framer />
 
       </Canvas>
     </div>

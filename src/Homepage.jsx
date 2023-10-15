@@ -9,6 +9,8 @@ import './stylesheets/skills.css'
 import { useState, memo, useEffect } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
+import { motion } from "framer-motion"
+import { useMotionValue, useTransform } from "framer-motion"
 
 
 export default function Homepage() {
@@ -40,7 +42,7 @@ export const About = memo(({page, setPage}) => {
       <div className="content blue-grey">
         <div className="main-container">
           <div className="container-title">
-            <h3>about</h3>
+            {/* <h3>about</h3> */}
             <p className='top-text'>I am a software developer based in NYC who is passionate about combining the 2d with 3d and bringing creative ideas to life. </p>
             {/* <p className='label-rotate'>A life enthusiast who loves to explore.</p> */}
             <p className='spin-label'>( Spin the cube! )</p>
@@ -60,7 +62,7 @@ export const Skills = memo(({page, setPage}) => {
       <div className="content tiffany-blue">
         <div className="main-container-skills">
           <div className="container-title">
-            <h3>skills</h3>
+            {/* <h3>skills</h3> */}
           </div>
           <SkillComponent />
         </div>
@@ -77,7 +79,7 @@ export const Projects = memo(({page, setPage}) => {
       <div className="content purple">
         <div className="normal-container .big-content">
           <div className="project-container-title">
-            <h3>projects</h3>
+            {/* <h3>projects</h3> */}
           </div>
           <ProjectComponent />
         </div>
@@ -94,7 +96,7 @@ export const Contact = memo(({page, setPage}) => {
       <div className="content chinese-violet">
         <div className="contact-container .big-content">
           <div className="container-title">
-            <h3>contact</h3>
+            {/* <h3>contact</h3> */}
           </div>
           <ContactComponent />
         </div>
