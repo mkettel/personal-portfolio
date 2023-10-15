@@ -1,4 +1,4 @@
-
+import React, { useRef, useEffect } from 'react';
 
 
 export default function ProjectComponent() {
@@ -59,12 +59,11 @@ export default function ProjectComponent() {
       gh: 'https://github.com/mkettel/AV-TECHDADDY',
       desc: 'This was my first knowledge base site that I built. It was used at Vail Health Hospital to organize all of the technical equipment used within the operating room. The user can search by doctor, vendor or equipment type. paired with carefully placed QR codes and corresponding site ID tags, the user gets a thoughtfully curated experience during high-stress time-sensitve times in the OR.'
     },
-
-
   ]
   console.log(projectArray.map((project) => {
     project
   }));
+
   return<>
 
       <div className="project-container">

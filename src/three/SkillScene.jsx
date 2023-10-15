@@ -17,7 +17,7 @@ export default function SkillScene() {
     useEffect(() => {
       function handleResize() {
         const { innerWidth } = window;
-        const isMobile = innerWidth <= 1200; // Adjust the breakpoint for mobile devices
+        const isMobile = innerWidth <= 1000; // Adjust the breakpoint for mobile devices
         const scale = isMobile ? 1.4 : 1.75; // Adjust the scale values for mobile
         const position = isMobile ? [1, 0, -1] : [-1.5, 0, -1]
         setCubeScale(scale);
