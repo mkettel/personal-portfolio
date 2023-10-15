@@ -15,14 +15,12 @@ export default function Navbar({page, setPage}) {
 
   return <>
     <div className="header-container grey">
-      <motion.h1 drag dragConstraints={{ left: -5, right: 200, top: 30, bottom: 10 }} dragElastic={.7} >Matthew Kettelkamp</motion.h1>
-      {/* <div className="link-box"> */}
-      <motion.div className="link-box">
-        <motion.a href="https://www.linkedin.com/in/matthew-kettelkamp-100490b2/" target='_blank'>LinkedIn</motion.a>
-        <motion.a href="https://github.com/mkettel" target='_blank'>Github</motion.a>
-        <motion.a href="mailto:mattkettelkamp@gmail.com">Email</motion.a>
-      </motion.div>
-      {/* </div> */}
+      <h1 drag dragConstraints={{ left: -5, right: 200, top: 30, bottom: 10 }} dragElastic={.7} >Matthew Kettelkamp</h1>
+      <div className="link-box">
+        <a href="https://www.linkedin.com/in/matthew-kettelkamp-100490b2/" target='_blank'>LinkedIn</a>
+        <a href="https://github.com/mkettel" target='_blank'>Github</a>
+        <a href="mailto:mattkettelkamp@gmail.com">Email</a>
+      </div>
     </div>
     <nav>
       <div className="navbar-container nav">
