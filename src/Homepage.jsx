@@ -9,13 +9,25 @@ import './stylesheets/skills.css'
 import { useState, memo, useEffect } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
-import { motion } from "framer-motion"
-import { useMotionValue, useTransform } from "framer-motion"
 
 
 export default function Homepage() {
 
   const [page, setPage] = useState('about');
+
+  const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 });
+
+  const onMouseMove = (e) => {
+    setFollowerPosition({ x: e.clientX, y: e.clientY });
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousemove", onMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+    }
+  }, []);
 
 
   if (page === 'about') {
@@ -33,8 +45,6 @@ export default function Homepage() {
 
 
 export const About = memo(({page, setPage}) => {
-
-  console.log(useEffect);
 
   return<>
   <div className="home-root">

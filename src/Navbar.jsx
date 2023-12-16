@@ -1,13 +1,10 @@
 import './stylesheets/navbar.css'
-import { useState, useEffect } from 'react'
-import { motion } from "framer-motion"
-import { animate } from "framer-motion"
-import { Link } from 'wouter'
+import { useState, useEffect, useRef } from 'react'
+import { gsap } from 'gsap';
 
 export default function Navbar({page, setPage}) {
 
   const [active, setActive] = useState('tile-about')
-
 
   useEffect(() => {
     setActive(`tile-${page}`)
