@@ -15,9 +15,16 @@ export default function AboutImage() {
 
   return <>
       <div className='small-canvas'>
-        <Canvas frameloop='demand'>
-          <PerspectiveCamera position={[0, 0, 0]} />
-          <OrbitControls autoRotate autoRotateSpeed={.55} />
+        <Canvas frameloop='demand' orthographic camera={{ position: [10, 20, 20], zoom: 80 }}>
+          {/* <PerspectiveCamera position={[0, 0, 0]} /> */}
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={.55}
+            minZoom={70}
+            maxZoom={110}
+            enablePan={true}
+            dampingFactor={0.05}
+          />
           <ambientLight intensity={.4} />
 
           <Suspense fallback={<Placeholder scale={1.5} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
