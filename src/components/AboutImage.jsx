@@ -7,7 +7,7 @@ import '../stylesheets/about.css'
 import '../three/ImageCubes'
 import ImageCubes from '../three/ImageCubes'
 import Placeholder from '../three/Placeholder'
-
+import AbstractShape from '../three/AbstractShape'
 
 export default function AboutImage() {
 
@@ -30,6 +30,7 @@ export default function AboutImage() {
           <Suspense fallback={<Placeholder scale={1.5} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
             <Center>
               <ImageCubes />
+              <AbstractShape />
             </Center>
           </Suspense>
 

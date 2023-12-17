@@ -21,6 +21,7 @@ export default function ImageCubes() {
         const position = isMobile ? [0, -.5, -.5] : [0, 0.1, 0]
         setImageScale(scale);
         setImagePosition(position);
+        console.log(groupRef.current);
       }
       window.addEventListener('resize', handleResize);
     handleResize(); // Call the function initially
