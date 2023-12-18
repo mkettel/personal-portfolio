@@ -48,7 +48,7 @@
     bottom: -180px;
    }
    .spin-label {
-    position: absolute;
-    bottom: -280px;
+    position: relative;
+    top: 28vh;
    }
 }
