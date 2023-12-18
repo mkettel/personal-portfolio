@@ -17,11 +17,10 @@ export default function ImageCubes() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 768; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? 1 : 1.8; // Adjust the scale values for mobile
+        const scale = isMobile ? 1 : 2; // Adjust the scale values for mobile
         const position = isMobile ? [0, -.5, -.5] : [0, 0.1, 0]
         setImageScale(scale);
         setImagePosition(position);
-        console.log(groupRef.current);
       }
       window.addEventListener('resize', handleResize);
     handleResize(); // Call the function initially
@@ -42,7 +41,7 @@ export default function ImageCubes() {
   }, [hovered]);
 
   return <>
-        <group scale={imageScale} rotation={[0, .7, 0]} ref={groupRef} position={imagePosition} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
+        <group scale={imageScale} rotation={[-0.1, .7, 0]} ref={groupRef} position={imagePosition} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >
 
           {/* Bottom Image */}
           <mesh position={[0, -1, -1]} rotation={[Math.PI / 2, 0, 0]} onPointerOver={() => setHovered(true)} onPointerOut={() => setHovered(false)} >

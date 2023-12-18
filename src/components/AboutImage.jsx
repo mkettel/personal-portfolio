@@ -14,7 +14,7 @@ export default function AboutImage() {
 
 
   return <>
-      <div className='small-canvas'>
+      <div className='small-canvas-about'>
         <Canvas frameloop='demand' orthographic camera={{ position: [10, 20, 20], zoom: 80 }}>
           {/* <PerspectiveCamera position={[0, 0, 0]} /> */}
           <OrbitControls
@@ -30,8 +30,8 @@ export default function AboutImage() {
           <Suspense fallback={<Placeholder scale={1.5} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>
             <Center>
               <ImageCubes />
-              <AbstractShape />
             </Center>
+            <AbstractShape count={4000} shape="box" />
           </Suspense>
 
         </Canvas>
