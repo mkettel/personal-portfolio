@@ -31,7 +31,7 @@ export default function AboutImage() {
             <Center>
               <ImageCubes />
             </Center>
-            <AbstractShape count={4000} shape="box" />
+            <AbstractShape count={5000} shape="box" />
           </Suspense>
 
         </Canvas>

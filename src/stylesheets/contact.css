@@ -12,21 +12,23 @@ p,h1,h2,input,a,label,button, textarea {
 }
 
 .contact-container {
-  padding: 0px 10px 0px;
+  /* padding: 0px 10px 0px; */
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  position: relative;
+  /* position: relative; */
   overflow-y: scroll;
   overflow-x: hidden;
+  align-items: center;
+  justify-content: center
 }
 .contact-layout {
   display: flex;
   /* margin-top: 80px; */
-  position: absolute;
-  top: 40px;
-  left: 30px;
+  /* position: absolute; */
+  /* top: 40px; */
+  /* left: 30px; */
   width: 100%;
   z-index: 1000000;
   animation: fade .5s linear 1s forwards;
@@ -36,6 +38,7 @@ p,h1,h2,input,a,label,button, textarea {
   display: flex;
   flex-direction: column;
   width: 60%;
+  padding: 10px;
 }
 .input-field {
   border: 2px solid #EEE0CB;
@@ -44,15 +47,18 @@ p,h1,h2,input,a,label,button, textarea {
   margin: 10px 10px;
   display: flex;
   align-items: center;
+  border: 1px solid black;
+  background-color: #ffffff94;
 }
 .input-field .input-label {
   margin-right: 20px;
   color: #EEE0CB;
+  color: #131313;
   text-transform: uppercase;
 }
 .input-field .input-general {
-  /* background-color: transparent */
-  background-color: #eee0cb55;
+  background-color: transparent;
+  /* background-color: #eee0cb55; */
   padding: 10px;
   border: none;
   width: 100%;
@@ -79,6 +85,9 @@ p,h1,h2,input,a,label,button, textarea {
   align-items: center;
   background-color: transparent;
   position: relative;
+  border: 1px solid black;
+  background-color: #ffffff94;
+  transition: .3s all;
 }
 .input-button {
   position: absolute;
@@ -92,6 +101,8 @@ p,h1,h2,input,a,label,button, textarea {
 }
 .button-div:hover {
   cursor: pointer;
+  background-color: #ffffffeb;
+  transition: .3s all;
 }
 .input-button:nth-child(2) {
   position: absolute;

@@ -10,12 +10,24 @@ font-family: 'Sora', sans-serif;
 
 body {
   overflow: hidden;
+  margin: 8px;
+  height: 100vh;
 }
+
 /* Main Stylesheet */
 :root {
-  background-color: rgb(239, 239, 239);
   background-color: #EEE0CB;
+  --background-color-light: #EE0CB;
+  --text-color-light: #141115;
+  --background-color-dark: #141115;
+  --text-color-dark: #EEE0CB;
 }
+
+body, a, h1, h2, h3, p {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
 
 /* 3D Scene Css fixed page */
 .scene-root

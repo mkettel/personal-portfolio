@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef, useEffect, useMemo } from 'react';
 import { Color, Vector3, Quaternion } from "three";
 import * as THREE from 'three';
+import { useThree, useFrame } from '@react-three/fiber';
 
 
 const AbstractShape = (props) => {
@@ -73,6 +74,11 @@ const AbstractShape = (props) => {
       return positions;
   }, [count, shape]);
 
+
+  useFrame((state) => {
+
+  })
+
   return (
     <>
     {/* <ambientLight intensity={.9} /> */}
@@ -85,7 +91,7 @@ const AbstractShape = (props) => {
           itemSize={3}
           />
       </bufferGeometry>
-      <pointsMaterial size={1.5} color={getColorByTime()} sizeAttenuation depthWrite={false} />
+      <pointsMaterial size={1} color={getColorByTime()} sizeAttenuation depthWrite={false} />
     </points>
     </>
 

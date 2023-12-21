@@ -9,42 +9,42 @@ import './stylesheets/skills.css'
 import { useState, memo, useEffect } from 'react'
 import SkillComponent from './components/SkillComponent'
 import ResumeComponent from './components/ResumeComponent'
+import { ThemeContext } from './ThemeContext'
 
 
 export default function Homepage() {
 
-  const [page, setPage] = useState('about');
+  const [page, setPage] = useState('');
 
-  const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 });
 
-  const onMouseMove = (e) => {
-    setFollowerPosition({ x: e.clientX, y: e.clientY });
-  };
+  const ToggleThemeButton = () => {
+    const { theme, setTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", onMouseMove);
+    const toggleTheme = () => {
+      setTheme(theme === 'light' ? 'dark' : 'light');
     }
-  }, []);
-
-
-  if (page === 'about') {
-    return <About page={page} setPage={setPage} />
-  } else if (page === 'skills') {
-    return <Skills page={page} setPage={setPage} />
-  } else if (page === 'projects') {
-    return <Projects page={page} setPage={setPage} />
-  } else if (page === 'contact') {
-    return <Contact page={page} setPage={setPage} />
-  } else if (page === 'three') {
-    return <Three page={page} setPage={setPage} />
   }
+
+  // function setThePage(page) {
+    if (page === '') {
+      return <About page={page} setPage={setPage} />
+    } else if (page === 'about') {
+      return <About page={page} setPage={setPage} />
+    } else if (page === 'skills') {
+      return <Skills page={page} setPage={setPage} />
+    } else if (page === 'projects') {
+      return <Projects page={page} setPage={setPage} />
+    } else if (page === 'contact') {
+      return <Contact page={page} setPage={setPage} />
+    } else if (page === 'three') {
+      return <Three page={page} setPage={setPage} />
+    }
+  // }
+
 }
 
 
-export const About = memo(({page, setPage}) => {
+export const About = memo(({page, setPage, setThePage}) => {
 
   return<>
   <div className="home-root">
@@ -103,7 +103,7 @@ export const Contact = memo(({page, setPage}) => {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content chinese-violet">
+      <div className="content transparent">
         <div className="contact-container .big-content">
           <div className="container-title">
             {/* <h3>contact</h3> */}

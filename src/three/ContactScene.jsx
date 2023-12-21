@@ -22,7 +22,7 @@ export default function ContactScene() {
     <group ref={knot}>
     <TorusKnot  scale={1.8} position={[3, 0, 0]} >
       {/* <MeshWobbleMaterial color={'yellow'} /> */}
-      <meshPhongMaterial color="yellow" wireframe />
+      <meshPhongMaterial color="black" wireframe />
     </TorusKnot>
     </group>
 
