@@ -34,12 +34,13 @@ p,h1,h2 {
   background-color: transparent;
 }
 .blue-grey {
-  background-color: #022812;
-  background-color: #141115;
+  background-color: rgba(35, 103, 64, 0);
+  background-color: rgb(1, 6, 19);
+  background-color: rgb(43 69 81);
 }
 .tiffany-blue {
-  background-color: #22333b;
   background-color: #BAB2CE;
+  background-color: #1a151c;
 }
 .chinese-violet {
   background-color: #3137F0;
@@ -56,6 +57,10 @@ p,h1,h2 {
 .transparent {
   background-color: transparent;
   border: 1px solid black;
+}
+.border {
+  border: 1px solid black;
+  overflow-x: scroll;
 }
 
 /* navbar container */

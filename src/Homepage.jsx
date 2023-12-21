@@ -86,7 +86,7 @@ export const Projects = memo(({page, setPage}) => {
   return<>
   <div className="home-root">
       <Navbar page={page} setPage={setPage} />
-      <div className="content purple">
+      <div className="content border">
         <div className="normal-container .big-content">
           <div className="project-container-title">
             {/* <h3>projects</h3> */}

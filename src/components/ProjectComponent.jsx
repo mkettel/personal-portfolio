@@ -71,15 +71,15 @@ export default function ProjectComponent() {
           return (
             <div key={project.id} className="project-card">
               <div className="project-title">
-                <h2>{project.title}</h2>
+                <h2 className='detail-color'>{project.title}</h2>
               </div>
               {project.link ? (
                 <div className="project-link-link">
                   <a target="_blank" href={project.link}>
-                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i className="fa-solid fa-arrow-up-right-from-square "></i>
                   </a>
                   <a target="_blank" href={project.gh}>
-                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-github "></i>
                   </a>
                 </div>
               ) : (
@@ -95,12 +95,12 @@ export default function ProjectComponent() {
               <div className="project-lang">
               {project.lang.map((lang) => {
                 return (
-                  <p>{lang}</p>
+                  <p className='detail-color'>{lang}</p>
                 )
               })}
               </div>
               <div className="project-desc">
-               <p>{project.desc}</p>
+               <p className='detail-color'>{project.desc}</p>
               </div>
             </div>
           )

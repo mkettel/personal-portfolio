@@ -33,6 +33,7 @@ h3,h2,p {
 }
 .project-link-link i {
   color: #EEE0CB;
+  color: #4B87A2;
 }
 .project-link-link i:hover {
   color: #FB62F6;
@@ -52,6 +53,7 @@ h3,h2,p {
   padding: 0px 20px 20px 20px;
   margin-top: 20px;
   gap: 15px;
+  scroll-behavior: smooth;
 }
 .project-card {
   position: relative;
@@ -61,7 +63,7 @@ h3,h2,p {
   width: 500px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  border: 3px solid #EEE0CB;
+  /* border: 3px solid #EEE0CB; */
   overflow-y: scroll;
   overflow-x: hidden;
   /* overflow: hidden; */
@@ -220,6 +222,9 @@ h3,h2,p {
 }
 .project-card .project-desc p {
   font-size: 18px;
+}
+.detail-color {
+  color: #4B87A2;
 }
 
 @media only screen and  (min-width: 200px) and (max-width: 700px) {
