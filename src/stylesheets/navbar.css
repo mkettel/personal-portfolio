@@ -288,7 +288,7 @@ p,h1,h2 {
   }
   /* Content Container */
   .content {
-    width: calc(100% - 1px);
+    width: calc(100% - 5px);
     height: 53vh;
     margin-top: 12px;
     position: relative;
