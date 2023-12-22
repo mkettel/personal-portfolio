@@ -91,6 +91,7 @@ p,h1,h2 {
 }
 .link-box a:hover {
   color: #F63D01;
+  color: #4B87A2;
 }
 .navbar-container {
   --n: 5; /* number of rows*/

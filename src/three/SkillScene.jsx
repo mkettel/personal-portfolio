@@ -18,7 +18,7 @@ export default function SkillScene() {
       function handleResize() {
         const { innerWidth } = window;
         const isMobile = innerWidth <= 1000; // Adjust the breakpoint for mobile devices
-        const scale = isMobile ? 1.4 : 1.75; // Adjust the scale values for mobile
+        const scale = isMobile ? 1.4 : 1.95; // Adjust the scale values for mobile
         const position = isMobile ? [0, 0, -1] : [0, 0, -1.5]
         setCubeScale(scale);
         setCubePosition(position);
@@ -67,11 +67,11 @@ export default function SkillScene() {
                   thickness={1.5}
                   ior={1.3}
                   chromaticAberration={0.025}
-                  anisotropy={0.12}
+                  anisotropy={0.02}
                   distortion={0.12}
                   distortionScale={0.19}
                   temporalDistortion={0.2}
-                  iridescence={2}
+                  iridescence={7}
                   iridescenceIOR={1}
                   iridescenceThicknessRange={[0, 1400]}
                   side={THREE.DoubleSide}
@@ -90,7 +90,7 @@ export default function SkillScene() {
               position={[-4, -.3, .6]}
               scale={[.5, .5, .5]}
               letterSpacing={.15}
-              height={.5}
+              height={.3}
             >
               React Three Fiber
             <MeshReflectorMaterial color={'#E087EF'} castShadow  />
@@ -150,7 +150,7 @@ export default function SkillScene() {
             height={.4}
           >
             MySQL
-          <meshStandardMaterial color={'#F3F3F3'} castShadow  />
+          <meshStandardMaterial color={'#D1345B'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}

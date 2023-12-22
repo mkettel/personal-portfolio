@@ -14,7 +14,7 @@ export default function SkillComponent() {
 
   return <>
     <div className='small-canvas-about'>
-        <Canvas shadows camera={{ position: [8, 0, 20], fov: 45, near: 1, far: 50 }}>
+        <Canvas shadows camera={{ position: [6, 0, 20], fov: 47, near: 1, far: 50 }}>
           <color attach="background" args={['#1a151c']} />
           {/* <PerspectiveCamera position={[-1, 0, -8]} > */}
           {/* <OrbitControls /> */}
