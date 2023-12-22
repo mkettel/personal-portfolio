@@ -14,7 +14,7 @@ import { ThemeContext } from './ThemeContext'
 
 export default function Homepage() {
 
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState('about');
 
 
   const ToggleThemeButton = () => {

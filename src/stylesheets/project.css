@@ -36,7 +36,7 @@ h3,h2,p {
   color: #4B87A2;
 }
 .project-link-link i:hover {
-  color: #FB62F6;
+  color: rgb(255, 255, 255);
 }
 .project-link-link i:nth-child(1) {
   margin-left: 10px;
@@ -112,7 +112,7 @@ h3,h2,p {
   }
 }
 .screen-overlay {
-  background: linear-gradient(#34605a18, #34605a11 3px, transparent 3px, transparent 9px);
+  background: linear-gradient(#34605a18, #34605a11 3px, transparent 5px, transparent 9px);
   background-size: 100% 9px;
   height: 135%;
   width: 100%;

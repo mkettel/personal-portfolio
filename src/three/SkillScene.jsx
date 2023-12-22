@@ -37,7 +37,7 @@ export default function SkillScene() {
   return <>
 
     {/* <ambientLight castShadow intensity={3} /> */}
-    <directionalLight position={[7, 4, 10]} intensity={3} iridescence={3} />
+    <directionalLight position={[9, 5, 10]} intensity={2} iridescence={4} />
 
     {/* Presentation Controls */}
     {/* <PresentationControls
@@ -93,7 +93,7 @@ export default function SkillScene() {
               height={.5}
             >
               React Three Fiber
-            <MeshReflectorMaterial color={'#E3170A'} castShadow  />
+            <MeshReflectorMaterial color={'#E087EF'} castShadow  />
           </Text3D>
           </Float>
           <Text3D
@@ -106,18 +106,18 @@ export default function SkillScene() {
             bevelThickness={.9}
           >
             React
-          <meshStandardMaterial color={'#42CAFD'} castShadow  />
+          <meshStandardMaterial color={'#EE5D17'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
-            rotation={[-.5, 0, -.5]}
+            rotation={[-.3, 0, -.3]}
             position={[0, 1.3, 0]}
             scale={[.4, .4, .4]}
             letterSpacing={.15}
             height={.5}
           >
             Javascript
-          <meshStandardMaterial color={'#F5F749'} castShadow  />
+          <meshStandardMaterial color={'#EE5D17'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
@@ -128,7 +128,7 @@ export default function SkillScene() {
             height={.4}
           >
             Vue
-          <meshStandardMaterial color={'#DDA77B'} castShadow  />
+          <meshStandardMaterial color={'#0E34A0'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
@@ -139,7 +139,7 @@ export default function SkillScene() {
             height={.7}
           >
             Firebase
-          <meshStandardMaterial color={'#3F84E5'} castShadow  />
+          <meshStandardMaterial color={'#ABEC5F'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
@@ -150,7 +150,7 @@ export default function SkillScene() {
             height={.4}
           >
             MySQL
-          <meshStandardMaterial color={'#fcf6bd'} castShadow  />
+          <meshStandardMaterial color={'#F3F3F3'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
@@ -161,7 +161,7 @@ export default function SkillScene() {
             height={.3}
           >
             Blender
-          <meshStandardMaterial color={'#01FDF6'} castShadow  />
+          <meshStandardMaterial color={'#EE5D17'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
@@ -172,7 +172,7 @@ export default function SkillScene() {
             height={.3}
           >
             Python
-          <meshStandardMaterial color={'#01FDF6'} castShadow  />
+          <meshStandardMaterial color={'#ABEC5F'} castShadow  />
         </Text3D>
           <Text3D
             font={latoBold}
