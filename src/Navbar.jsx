@@ -21,7 +21,7 @@ export default function Navbar({page, setPage, setThePage}) {
     <div className="header-container grey">
       <h1 drag dragConstraints={{ left: -5, right: 200, top: 30, bottom: 10 }} dragElastic={.7} >Matthew Kettelkamp</h1>
       <div className="link-box">
-        <a href="https://www.linkedin.com/in/matthew-kettelkamp-100490b2/" target='_blank'>LinkedIn</a>
+        <a href="https://www.linkedin.com/in/matthew-kettelkamp/" target='_blank'>LinkedIn</a>
         <a href="https://github.com/mkettel" target='_blank'>Github</a>
         <a href="mailto:mattkettelkamp@gmail.com">Email</a>
         {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
