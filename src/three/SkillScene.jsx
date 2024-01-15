@@ -1,12 +1,14 @@
 import { MeshReflectorMaterial, Float, Lightformer, Environment, MeshTransmissionMaterial, PresentationControls, Text3D, RoundedBox, CameraControls } from '@react-three/drei'
 import { useRef, useState, useEffect } from 'react'
 import * as THREE from 'three'
+import React from 'react'
 
 
 
-export default function SkillScene() {
+const SkillScene = () => {
 
   const latoBold = './fonts/lato-bold.json'
+  const chillaxReg = './fonts/code-font.json'
     // left image ref
     const groupRef = useRef()
 
@@ -206,3 +208,6 @@ export default function SkillScene() {
     </Environment>
   </>
 }
+
+
+export default React.memo(SkillScene);

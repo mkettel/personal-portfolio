@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useContext } from 'react'
 import { gsap } from 'gsap';
 import { ThemeContext } from './ThemeContext';
 
-export default function Navbar({page, setPage, setThePage}) {
+export default function Navbar({page, setPage, mousePosition, setMousePosition}) {
 
   const [active, setActive] = useState('')
 
@@ -19,6 +19,13 @@ export default function Navbar({page, setPage, setThePage}) {
 
   return <>
     <div className="header-container grey">
+      {/* <div className="follower" style={{
+        left: `${mousePosition.x}px`,
+        top: `${mousePosition.y}px`,
+        transform: `translate(-50%, -50%)`,
+        position: 'fixed',
+        backgroundColor: 'red'
+      }}></div> */}
       <h1 drag dragConstraints={{ left: -5, right: 200, top: 30, bottom: 10 }} dragElastic={.7} >Matthew Kettelkamp</h1>
       <div className="link-box">
         <a href="https://www.linkedin.com/in/matthew-kettelkamp/" target='_blank'>LinkedIn</a>

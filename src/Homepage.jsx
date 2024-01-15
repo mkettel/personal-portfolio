@@ -15,6 +15,18 @@ import { ThemeContext } from './ThemeContext'
 export default function Homepage() {
 
   const [page, setPage] = useState('about');
+  const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+
+  useEffect(() => {
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }
+    window.addEventListener('mousemove', updateMousePosition);
+
+    return () => {
+      window.removeEventListener('mousemove', updateMousePosition);
+    }
+  }, [])
 
 
   const ToggleThemeButton = () => {
@@ -27,7 +39,7 @@ export default function Homepage() {
 
   // function setThePage(page) {
     if (page === '') {
-      return <About page={page} setPage={setPage} />
+      return <About page={page} setPage={setPage} mousePosition={mousePosition} setMousePosition={setMousePosition} />
     } else if (page === 'about') {
       return <About page={page} setPage={setPage} />
     } else if (page === 'skills') {
@@ -44,11 +56,11 @@ export default function Homepage() {
 }
 
 
-export const About = memo(({page, setPage, setThePage}) => {
+export const About = memo(({page, setPage, mousePosition, setMousePosition}) => {
 
   return<>
   <div className="home-root">
-      <Navbar page={page} setPage={setPage} />
+      <Navbar page={page} setPage={setPage} mousePosition={mousePosition} setMousePosition={setMousePosition} />
       <div className="content blue-grey">
         <div className="main-container">
           <div className="container-title">

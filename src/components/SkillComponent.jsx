@@ -1,4 +1,4 @@
-import { AccumulativeShadows, RandomizedLight } from '@react-three/drei'
+import { AccumulativeShadows, RandomizedLight, Loader } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import '../stylesheets/navbar.css'
@@ -13,6 +13,7 @@ export default function SkillComponent() {
 
   return <>
     <div className='small-canvas-about'>
+        <Loader />
         <Canvas shadows camera={{ position: [6, 0, 20], fov: 47, near: 1, far: 50 }}>
           <color attach="background" args={['#1a151c']} />
           <Suspense fallback={<Placeholder scale={3} position={[0, 0, 0]} rotation={[0, .6, 0]} />}>

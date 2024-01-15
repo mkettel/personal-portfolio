@@ -153,7 +153,6 @@ p,h1,h2 {
 .black {
   color: black;
 }
-
 @keyframes grow {
   0% {
     width: 180px;

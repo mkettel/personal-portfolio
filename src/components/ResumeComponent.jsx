@@ -45,7 +45,7 @@ export default function ResumeComponent() {
         <ambientLight intensity={.8} />
           {/* <Center> */}
             <Html castShadow receiveShadow occlude="blending" position={screenPosition} transform>
-              <iframe className='scene' title="embed" width={viewWidth} height={viewHeight} src="https://3d-resume-six.vercel.app/" frameBorder={0} />
+              <iframe className='scene' title="embed" width={viewWidth} height={viewHeight} src="https://resume-display.vercel.app/" frameBorder={0} />
             </Html>
           {/* </Center> */}
           </PerspectiveCamera>
